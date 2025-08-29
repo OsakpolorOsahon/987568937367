@@ -9,11 +9,9 @@ export default function Footer() {
           {/* Organization Info */}
           <div>
             <div className="flex items-center space-x-3 mb-6">
-              <img 
-                src="/attached_assets/IMG-20250829-WA0003_1756472903831.jpg" 
-                alt="Covenant Care Logo" 
-                className="w-10 h-10 object-contain rounded-lg bg-white/10 p-1"
-              />
+              <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+                <Heart className="text-primary-foreground h-5 w-5" />
+              </div>
               <div className="font-bold text-lg text-background">Covenant Care</div>
             </div>
             <p className="text-background/80 mb-6 leading-relaxed">
