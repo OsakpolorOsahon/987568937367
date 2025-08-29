@@ -59,27 +59,18 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="section-gradient py-20" ref={ref}>
+    <section className="bg-background py-20" ref={ref}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6 }}
-        >
+        <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Get In Touch</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Whether you need prayer, want to volunteer, or have questions about our programs, we'd love to hear from you.
           </p>
-        </motion.div>
+        </div>
         
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-            transition={{ duration: 0.6 }}
-          >
+          <div>
             <div className="bg-card p-8 rounded-2xl shadow-lg">
               <h3 className="text-2xl font-bold text-foreground mb-6">Send Us a Message</h3>
               <Form {...form}>
@@ -182,14 +173,10 @@ export default function ContactSection() {
                 </form>
               </Form>
             </div>
-          </motion.div>
+          </div>
           
           {/* Contact Information */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
+          <div>
             <div className="space-y-8">
               <div>
                 <h3 className="text-2xl font-bold text-foreground mb-6">Contact Information</h3>
@@ -236,7 +223,7 @@ export default function ContactSection() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

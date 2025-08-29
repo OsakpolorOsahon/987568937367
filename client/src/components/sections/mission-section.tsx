@@ -32,30 +32,22 @@ export default function MissionSection() {
   ];
 
   return (
-    <section className="bg-card py-20" ref={ref}>
+    <section className="bg-muted py-20" ref={ref}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6 }}
-        >
+        <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Mission & Values</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Guided by Christian principles, we strive to make a meaningful impact through prayer, service, and community engagement.
           </p>
-        </motion.div>
+        </div>
         
         <div className="grid md:grid-cols-3 gap-8">
           {missions.map((mission, index) => {
             const IconComponent = mission.icon;
             return (
-              <motion.div
+              <div
                 key={mission.title}
-                className="card-hover bg-accent/30 p-8 rounded-2xl text-center"
-                initial={{ opacity: 0, y: 50 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
+                className="card-hover bg-card p-8 rounded-2xl text-center shadow-lg"
               >
                 <div className={`w-16 h-16 ${mission.bgColor} rounded-full flex items-center justify-center mx-auto mb-6`}>
                   <IconComponent className={`${mission.textColor} h-8 w-8`} />
@@ -64,7 +56,7 @@ export default function MissionSection() {
                 <p className="text-muted-foreground leading-relaxed">
                   {mission.description}
                 </p>
-              </motion.div>
+              </div>
             );
           })}
         </div>

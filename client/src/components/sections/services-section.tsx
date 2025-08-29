@@ -51,28 +51,20 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section className="section-gradient py-20" ref={ref}>
+    <section className="bg-background py-20" ref={ref}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6 }}
-        >
+        <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Programs & Services</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             From prayer support to community outreach, we offer various programs designed to strengthen faith and serve others.
           </p>
-        </motion.div>
+        </div>
         
         <div className="grid lg:grid-cols-2 gap-12">
           {programs.map((program, index) => (
-            <motion.div
+            <div
               key={program.title}
               className="card-hover bg-card p-8 rounded-2xl shadow-lg"
-              initial={{ opacity: 0, y: 50 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
             >
               <div className="flex items-start space-x-6">
                 <img 
@@ -95,7 +87,7 @@ export default function ServicesSection() {
                   </ul>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
