@@ -29,7 +29,7 @@ export default function VideoSection() {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <iframe
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            src="https://www.youtube.com/embed/XqZsoesa55w"
             title="Covenant Care Christian Prayer Partner Foundation Story"
             className="w-full h-full"
             frameBorder="0"

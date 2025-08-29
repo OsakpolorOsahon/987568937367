@@ -45,7 +45,7 @@ export default function HeroSection() {
             <Button 
               size="lg"
               variant="outline"
-              className="border-2 border-white text-white hover:bg-white hover:text-gray-900 font-semibold text-lg backdrop-blur-sm"
+              className="border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-gray-900 font-semibold text-lg backdrop-blur-sm"
               data-testid="button-watch-story"
             >
               <PlayCircle className="mr-2 h-5 w-5" />

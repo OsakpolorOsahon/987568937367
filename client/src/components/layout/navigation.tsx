@@ -31,7 +31,7 @@ export default function Navigation() {
               alt="Covenant Care Logo" 
               className="w-10 h-10 object-cover rounded-lg"
             />
-            <div className="font-bold text-lg text-primary">Covenant Care</div>
+            <div className="font-bold text-lg text-gray-900">Covenant Care</div>
           </Link>
           
           {/* Desktop Navigation */}
