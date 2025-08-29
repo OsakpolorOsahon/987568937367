@@ -12,6 +12,18 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
+          <motion.div 
+            className="flex justify-center mb-8"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <img 
+              src="/attached_assets/IMG-20250829-WA0003_1756472903831.jpg" 
+              alt="Covenant Care Christian Prayer Partner Foundation Logo" 
+              className="w-24 h-24 md:w-32 md:h-32 object-contain rounded-2xl bg-white/10 p-4 shadow-2xl"
+            />
+          </motion.div>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
             United in <span className="text-secondary">Prayer</span>,<br />
             Serving with <span className="text-secondary">Love</span>
