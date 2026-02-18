@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Heart, Menu, X } from "lucide-react";
-import logoImage from "@assets/IMG-20250829-WA0003_1756472903831.jpg";
+import logoImage from "@assets/CPP_LOGO_(1)_1771413757122.png";
 
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -25,13 +25,12 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3" data-testid="logo-link">
+          <Link href="/" className="flex items-center" data-testid="logo-link">
             <img 
               src={logoImage} 
-              alt="Covenant Care Logo" 
-              className="w-10 h-10 object-cover rounded-lg"
+              alt="Covenant Care Christian Prayer Partner Foundation" 
+              className="h-12 w-auto object-contain"
             />
-            <div className="font-bold text-lg text-gray-900">Covenant Care</div>
           </Link>
           
           {/* Desktop Navigation */}

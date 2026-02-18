@@ -1,6 +1,6 @@
 import { Heart, MapPin, Phone, Mail, Clock, Facebook, Twitter, Instagram, Youtube } from "lucide-react";
 import { Link } from "wouter";
-import logoImage from "@assets/IMG-20250829-WA0003_1756472903831.jpg";
+import logoImage from "@assets/CPP_LOGO_(1)_1771413757122.png";
 
 export default function Footer() {
   return (
@@ -9,13 +9,12 @@ export default function Footer() {
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
           {/* Organization Info */}
           <div>
-            <div className="flex items-center space-x-3 mb-6">
+            <div className="flex items-center mb-6">
               <img 
                 src={logoImage} 
-                alt="Covenant Care Logo" 
-                className="w-10 h-10 object-cover rounded-lg bg-white/10 p-1"
+                alt="Covenant Care Christian Prayer Partner Foundation" 
+                className="h-14 w-auto object-contain bg-white/90 rounded-md p-1"
               />
-              <div className="font-bold text-lg text-background">Covenant Care</div>
             </div>
             <p className="text-background/80 mb-6 leading-relaxed">
               Connecting hearts through prayer and serving communities with the love of Christ. Join us in making a difference in our world.
