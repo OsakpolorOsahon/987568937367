@@ -69,7 +69,6 @@ export default function ContactSection() {
         </div>
         
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
           <div>
             <div className="bg-card p-8 rounded-2xl shadow-lg">
               <h3 className="text-2xl font-bold text-foreground mb-6">Send Us a Message</h3>
@@ -134,7 +133,8 @@ export default function ContactSection() {
                             <SelectItem value="Prayer Request">Prayer Request</SelectItem>
                             <SelectItem value="Volunteer Inquiry">Volunteer Inquiry</SelectItem>
                             <SelectItem value="General Information">General Information</SelectItem>
-                            <SelectItem value="Program Enrollment">Program Enrollment</SelectItem>
+                            <SelectItem value="Missions & Outreach">Missions & Outreach</SelectItem>
+                            <SelectItem value="Orphanage & Widow Care">Orphanage & Widow Care</SelectItem>
                           </SelectContent>
                         </Select>
                         <FormMessage />
@@ -163,7 +163,7 @@ export default function ContactSection() {
                   
                   <Button 
                     type="submit" 
-                    className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold"
+                    className="w-full"
                     disabled={submitContactMutation.isPending}
                     data-testid="button-send-message"
                   >
@@ -175,43 +175,43 @@ export default function ContactSection() {
             </div>
           </div>
           
-          {/* Contact Information */}
           <div>
             <div className="space-y-8">
               <div>
                 <h3 className="text-2xl font-bold text-foreground mb-6">Contact Information</h3>
                 <div className="space-y-6">
-                  <div className="flex items-start space-x-4">
+                  <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
                       <MapPin className="text-primary-foreground h-5 w-5" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-foreground">Address</h4>
-                      <p className="text-muted-foreground">123 Faith Avenue<br />Community City, CC 12345</p>
+                      <h4 className="font-semibold text-foreground">Headquarters</h4>
+                      <p className="text-muted-foreground">Lagos State, Nigeria</p>
                     </div>
                   </div>
                   
-                  <div className="flex items-start space-x-4">
+                  <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center flex-shrink-0">
                       <Phone className="text-secondary-foreground h-5 w-5" />
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground">Phone</h4>
-                      <p className="text-muted-foreground">+1 (555) 123-PRAY<br />Emergency: +1 (555) 911-HELP</p>
+                      <p className="text-muted-foreground">+234 802 381 8547</p>
+                      <p className="text-muted-foreground">+234 903 787 7197</p>
                     </div>
                   </div>
                   
-                  <div className="flex items-start space-x-4">
+                  <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
                       <Mail className="text-primary-foreground h-5 w-5" />
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground">Email</h4>
-                      <p className="text-muted-foreground">info@covenantcare.org<br />prayers@covenantcare.org</p>
+                      <p className="text-muted-foreground">info@covenantcarefoundation.com.ng</p>
                     </div>
                   </div>
                   
-                  <div className="flex items-start space-x-4">
+                  <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center flex-shrink-0">
                       <Clock className="text-secondary-foreground h-5 w-5" />
                     </div>

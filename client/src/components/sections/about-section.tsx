@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Users, Heart } from "lucide-react";
+import { Users, Heart, Eye, Target } from "lucide-react";
 
 export default function AboutSection() {
   const ref = useRef(null);
@@ -30,30 +30,30 @@ export default function AboutSection() {
           >
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">About Covenant Care</h2>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Founded on the principles of faith, hope, and love, Covenant Care Christian Prayer Partner Foundation has been serving communities for over a decade. We believe in the transformative power of prayer and the importance of putting faith into action.
+              The Covenant Prayer Partner International, with headquarters in Lagos State, Nigeria, exists to pray, intercede and preach the gospel of our Lord Jesus Christ all over the world -- delivering the oppressed, setting the captives free, healing the broken-hearted, and giving hope to motherless children and widows.
             </p>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Our mission extends beyond prayer to include practical support for those in need, community outreach programs, and fostering spiritual growth among believers. Every prayer offered and every hand extended reflects our commitment to Christ's love.
+              We are committed to comforting and supplying the needs of the vulnerable, strengthening them through Christ Jesus, and preparing a people for the eternal kingdom of God.
             </p>
             
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-                  <Users className="text-primary-foreground h-6 w-6" />
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                  <Eye className="text-primary-foreground h-6 w-6" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground">Community Focused</h4>
-                  <p className="text-sm text-muted-foreground">Serving local and global communities</p>
+                  <h4 className="font-semibold text-foreground">Our Vision</h4>
+                  <p className="text-sm text-muted-foreground">An inter-denominational prayer ministry of truly born again believers</p>
                 </div>
               </div>
               
-              <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center">
-                  <Heart className="text-secondary-foreground h-6 w-6" />
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center flex-shrink-0">
+                  <Target className="text-secondary-foreground h-6 w-6" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground">Love in Action</h4>
-                  <p className="text-sm text-muted-foreground">Demonstrating Christ's love daily</p>
+                  <h4 className="font-semibold text-foreground">Our Mission</h4>
+                  <p className="text-sm text-muted-foreground">Raising a people of prayer, wisdom and power of God</p>
                 </div>
               </div>
             </div>

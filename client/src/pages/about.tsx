@@ -9,24 +9,21 @@ export default function About() {
     { icon: Globe, label: "Communities Served", value: "50+" },
   ];
 
-  const team = [
+  const values = [
     {
-      name: "Pastor Michael Chen",
-      role: "Founder & Director",
-      bio: "Pastor Michael founded Covenant Care with a vision to connect communities through prayer and service.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
+      title: "Prayer & Intercession",
+      description: "We intercede for all humanity in the entire world, connecting believers through united prayer.",
+      icon: Heart,
     },
     {
-      name: "Sarah Williams",
-      role: "Community Outreach Coordinator",
-      bio: "Sarah leads our community outreach programs, connecting with local organizations and volunteers.",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b372?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
+      title: "Gospel Outreach",
+      description: "We preach the gospel of our Lord Jesus Christ all over the world, establishing missions in Nigeria and abroad.",
+      icon: Globe,
     },
     {
-      name: "Dr. James Rodriguez",
-      role: "Prayer Ministry Director",
-      bio: "Dr. Rodriguez oversees our prayer ministries and provides spiritual guidance to our community.",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
+      title: "Compassionate Service",
+      description: "We care for orphans, widows, and the vulnerable, providing for their needs and comforting them through Christ.",
+      icon: Award,
     }
   ];
 
@@ -43,7 +40,7 @@ export default function About() {
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6">About Covenant Care</h1>
             <p className="text-xl md:text-2xl max-w-3xl mx-auto opacity-90">
-              Discover our journey of faith, service, and community transformation
+              An inter-denominational prayer ministry propelled by the Holy Spirit, interceding for all humanity
             </p>
           </motion.div>
         </div>
@@ -61,13 +58,13 @@ export default function About() {
             >
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Our Story</h2>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                Covenant Care Christian Prayer Partner Foundation was born from a simple yet powerful vision: to create a community where prayer and service unite to transform lives. Founded in 2012 by Pastor Michael Chen, our organization began as a small prayer group meeting in homes.
+                The Covenant Prayer Partner International, with headquarters in Lagos State, Nigeria, was founded to pray, intercede and preach the gospel of our Lord Jesus Christ all over the world -- delivering the oppressed, setting the captives free, healing the broken-hearted, setting at liberty all who are bruised and hurting.
               </p>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                What started with just a handful of believers has grown into a thriving community of over 2,500 members who actively participate in prayer, outreach, and discipleship programs. Our commitment to serving both local and global communities has resulted in countless lives being touched by God's love.
+                We are an inter-denominational prayer ministry of truly born again believers propelled by the Holy Spirit to know the only true God and His Son Jesus Christ and to join Him in the intercession ministry for the entire world.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Today, we continue to expand our reach while staying true to our core values of faith, hope, and love. Every program we offer and every service we provide is rooted in our belief that prayer changes everything and love transforms communities.
+                Our mission is raising a people of prayer, wisdom and power of God with purity and holiness in readiness for the second coming of our Lord and Saviour Jesus Christ of Nazareth. We give hope to motherless children and widows, comforting and supplying their needs, and preparing a people for the eternal kingdom of God.
               </p>
             </motion.div>
             
@@ -127,7 +124,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Team Section */}
+      {/* Core Values Section */}
       <section className="section-gradient py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
@@ -137,32 +134,32 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Leadership Team</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Core Values</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Meet the passionate leaders who guide our ministry and serve our community with dedication.
+              Guided by the Holy Spirit, these values drive everything we do as a ministry.
             </p>
           </motion.div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            {team.map((member, index) => (
-              <motion.div
-                key={member.name}
-                className="card-hover bg-card p-8 rounded-2xl shadow-lg text-center"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-              >
-                <img 
-                  src={member.image} 
-                  alt={member.name}
-                  className="w-32 h-32 rounded-full mx-auto mb-6 object-cover"
-                />
-                <h3 className="text-xl font-bold text-foreground mb-2">{member.name}</h3>
-                <p className="text-primary font-medium mb-4">{member.role}</p>
-                <p className="text-muted-foreground leading-relaxed">{member.bio}</p>
-              </motion.div>
-            ))}
+            {values.map((value, index) => {
+              const IconComponent = value.icon;
+              return (
+                <motion.div
+                  key={value.title}
+                  className="card-hover bg-card p-8 rounded-2xl shadow-lg text-center"
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.2 }}
+                >
+                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                    <IconComponent className="text-primary-foreground h-8 w-8" />
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground mb-4">{value.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{value.description}</p>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>

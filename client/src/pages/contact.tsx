@@ -220,9 +220,9 @@ export default function Contact() {
                                 </FormControl>
                                 <SelectContent>
                                   <SelectItem value="General Information">General Information</SelectItem>
-                                  <SelectItem value="Program Enrollment">Program Enrollment</SelectItem>
+                                  <SelectItem value="Missions & Outreach">Missions & Outreach</SelectItem>
+                                  <SelectItem value="Orphanage & Widow Care">Orphanage & Widow Care</SelectItem>
                                   <SelectItem value="Partnership Inquiry">Partnership Inquiry</SelectItem>
-                                  <SelectItem value="Media Request">Media Request</SelectItem>
                                 </SelectContent>
                               </Select>
                               <FormMessage />
@@ -423,7 +423,7 @@ export default function Contact() {
                             <FormItem>
                               <FormLabel>Phone Number</FormLabel>
                               <FormControl>
-                                <Input type="tel" placeholder="(555) 123-4567" {...field} data-testid="volunteer-input-phone" />
+                                <Input type="tel" placeholder="+234 XXX XXX XXXX" {...field} data-testid="volunteer-input-phone" />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -525,33 +525,33 @@ export default function Contact() {
                 <div>
                   <h3 className="text-2xl font-bold text-foreground mb-6">Contact Information</h3>
                   <div className="space-y-6">
-                    <div className="flex items-start space-x-4">
+                    <div className="flex items-start gap-4">
                       <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
                         <MapPin className="text-primary-foreground h-5 w-5" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-foreground">Address</h4>
-                        <p className="text-muted-foreground">123 Faith Avenue<br />Community City, CC 12345</p>
+                        <h4 className="font-semibold text-foreground">Headquarters</h4>
+                        <p className="text-muted-foreground">Lagos State, Nigeria</p>
                       </div>
                     </div>
                     
-                    <div className="flex items-start space-x-4">
+                    <div className="flex items-start gap-4">
                       <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center flex-shrink-0">
                         <Phone className="text-secondary-foreground h-5 w-5" />
                       </div>
                       <div>
                         <h4 className="font-semibold text-foreground">Phone</h4>
-                        <p className="text-muted-foreground">+1 (555) 123-PRAY<br />Emergency: +1 (555) 911-HELP</p>
+                        <p className="text-muted-foreground">+234 802 381 8547<br />+234 903 787 7197</p>
                       </div>
                     </div>
                     
-                    <div className="flex items-start space-x-4">
+                    <div className="flex items-start gap-4">
                       <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
                         <Mail className="text-primary-foreground h-5 w-5" />
                       </div>
                       <div>
                         <h4 className="font-semibold text-foreground">Email</h4>
-                        <p className="text-muted-foreground">info@covenantcare.org<br />prayers@covenantcare.org</p>
+                        <p className="text-muted-foreground">info@covenantcarefoundation.com.ng</p>
                       </div>
                     </div>
                     
@@ -573,7 +573,7 @@ export default function Contact() {
                     If you're experiencing a crisis and need immediate prayer or support, please don't hesitate to reach out.
                   </p>
                   <Button className="bg-red-600 hover:bg-red-700 text-white">
-                    Emergency Hotline: (555) 911-HELP
+                    Call: +234 802 381 8547
                   </Button>
                 </div>
               </div>

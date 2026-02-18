@@ -6,87 +6,87 @@ export default function Services() {
   const services = [
     {
       icon: Heart,
-      title: "Prayer Ministry",
-      description: "24/7 prayer support and intercession for individuals, families, and communities in need.",
+      title: "Prayer & Intercession Ministry",
+      description: "Interceding for all humanity in the entire world, connecting believers through united prayer and spiritual warfare.",
       features: [
         "Online prayer request submission",
+        "Telegram prayer group",
         "Weekly corporate prayer meetings",
-        "Emergency prayer hotline",
-        "Prayer partner matching",
+        "Emergency prayer support",
         "Healing prayer sessions"
       ],
-      schedule: "24/7 availability, Weekly meetings: Wednesdays 7PM",
-      contact: "prayers@covenantcare.org"
+      schedule: "24/7 availability",
+      contact: "info@covenantcarefoundation.com.ng"
     },
     {
       icon: HandHeart,
-      title: "Community Outreach",
-      description: "Practical assistance and support for local communities through various aid programs.",
+      title: "Gospel Outreach & Missions",
+      description: "Preaching the gospel of our Lord Jesus Christ all over the world, establishing and maintaining missions in Nigeria and abroad.",
       features: [
-        "Monthly food distribution",
-        "Clothing and essentials drive",
-        "Homeless shelter partnerships",
-        "Emergency financial assistance",
-        "Back-to-school supply drives"
+        "Evangelism across nations",
+        "Mission station establishment",
+        "Community food and essentials distribution",
+        "Partnership with NGOs and charitable organisations",
+        "Emergency humanitarian assistance"
       ],
-      schedule: "Monthly events, Emergency assistance: As needed",
-      contact: "outreach@covenantcare.org"
-    },
-    {
-      icon: Sprout,
-      title: "Discipleship Programs",
-      description: "Spiritual growth opportunities through Bible studies, mentorship, and faith development.",
-      features: [
-        "Small group Bible studies",
-        "One-on-one mentorship",
-        "Youth discipleship programs",
-        "New believer classes",
-        "Leadership development"
-      ],
-      schedule: "Various times throughout the week",
-      contact: "discipleship@covenantcare.org"
+      schedule: "Ongoing missions and monthly outreach events",
+      contact: "info@covenantcarefoundation.com.ng"
     },
     {
       icon: Users,
-      title: "Counseling Support",
-      description: "Professional Christian counseling services for individuals, couples, and families.",
+      title: "Orphanage & Widow Care",
+      description: "Establishing motherless babies homes, orphanages, and providing for the needs of widows, young and old persons.",
       features: [
-        "Individual counseling sessions",
-        "Marriage and family therapy",
-        "Crisis intervention support",
-        "Grief counseling",
-        "Addiction recovery support"
+        "Motherless babies homes",
+        "Orphanage establishment and support",
+        "Widow care and provision",
+        "Young and old person homes",
+        "Partnership with charitable organisations"
       ],
-      schedule: "By appointment: Mon-Fri 9AM-6PM",
-      contact: "counseling@covenantcare.org"
+      schedule: "Ongoing support programs",
+      contact: "info@covenantcarefoundation.com.ng"
+    },
+    {
+      icon: Sprout,
+      title: "Healing & Deliverance",
+      description: "Healing the sick, setting the captives free, delivering the oppressed and comforting the broken-hearted through Christ Jesus.",
+      features: [
+        "Healing and deliverance services",
+        "Crisis intervention and counselling",
+        "Spiritual warfare and intercession",
+        "Hospital and home visitation",
+        "Restoration ministry"
+      ],
+      schedule: "As needed, regular prayer services",
+      contact: "info@covenantcarefoundation.com.ng"
     },
     {
       icon: Calendar,
-      title: "Youth & Family Programs",
-      description: "Engaging programs designed to strengthen families and nurture young believers.",
+      title: "Educational Institutions",
+      description: "Establishing educational institutions that nurture faith, knowledge and character in the next generation.",
       features: [
-        "Youth group activities",
-        "Family devotion resources",
-        "Summer camp programs",
-        "Parent support groups",
-        "Children's ministry"
+        "Schools and learning centres",
+        "Youth discipleship programs",
+        "Bible study and training",
+        "Leadership development",
+        "Scholarship programs"
       ],
-      schedule: "Youth group: Fridays 6PM, Family events: Monthly",
-      contact: "youth@covenantcare.org"
+      schedule: "Various programs throughout the year",
+      contact: "info@covenantcarefoundation.com.ng"
     },
     {
       icon: Phone,
       title: "Emergency Support",
-      description: "Immediate assistance and spiritual support during times of crisis and urgent need.",
+      description: "Immediate assistance and spiritual support during times of crisis and urgent need, comforting and supplying their needs.",
       features: [
-        "24/7 crisis hotline",
+        "Crisis prayer support",
         "Emergency financial aid",
         "Disaster relief coordination",
         "Hospital visitation",
         "Bereavement support"
       ],
       schedule: "24/7 emergency line available",
-      contact: "emergency@covenantcare.org"
+      contact: "+234 802 381 8547"
     }
   ];
 
@@ -103,7 +103,7 @@ export default function Services() {
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6">Our Services & Programs</h1>
             <p className="text-xl md:text-2xl max-w-3xl mx-auto opacity-90">
-              Comprehensive spiritual and practical support for individuals, families, and communities
+              Preaching the gospel, interceding for all humanity, and serving communities with the love of Christ
             </p>
           </motion.div>
         </div>

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { PlayCircle, HandHeart } from "lucide-react";
+import { SiTelegram } from "react-icons/si";
 import logoImage from "@assets/CPP_LOGO_(1)_1771413757122.png";
 
 export default function HeroSection() {
@@ -28,9 +29,9 @@ export default function HeroSection() {
             Serving with <span className="text-orange-400">Love</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed text-white/95 drop-shadow-lg">
-            Covenant Care Christian Prayer Partner Foundation connects hearts through prayer and transforms communities through compassionate service. Join us in making a difference.
+            An inter-denominational prayer ministry raising a people of prayer, wisdom and power of God with purity and holiness in readiness for the second coming of our Lord and Saviour Jesus Christ.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center flex-wrap">
             <Button 
               size="lg"
               className="bg-orange-500 text-white font-semibold text-lg shadow-xl border-orange-600"
@@ -39,6 +40,16 @@ export default function HeroSection() {
               <HandHeart className="mr-2 h-5 w-5" />
               Join Our Mission
             </Button>
+            <a href="https://t.me/+sF8-2UwQoXxkNDdk" target="_blank" rel="noopener noreferrer">
+              <Button 
+                size="lg"
+                className="bg-sky-500 text-white font-semibold text-lg shadow-xl border-sky-600"
+                data-testid="button-join-telegram"
+              >
+                <SiTelegram className="mr-2 h-5 w-5" />
+                Join Our Telegram Prayer Group
+              </Button>
+            </a>
             <Button 
               size="lg"
               variant="outline"

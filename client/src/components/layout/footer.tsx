@@ -1,4 +1,5 @@
-import { Heart, MapPin, Phone, Mail, Clock, Facebook, Twitter, Instagram, Youtube } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Facebook, Twitter, Instagram, Youtube } from "lucide-react";
+import { SiTelegram } from "react-icons/si";
 import { Link } from "wouter";
 import logoImage from "@assets/CPP_LOGO_(1)_1771413757122.png";
 
@@ -7,7 +8,6 @@ export default function Footer() {
     <footer className="bg-foreground text-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
-          {/* Organization Info */}
           <div>
             <div className="flex items-center mb-6">
               <img 
@@ -17,9 +17,9 @@ export default function Footer() {
               />
             </div>
             <p className="text-background/80 mb-6 leading-relaxed">
-              Connecting hearts through prayer and serving communities with the love of Christ. Join us in making a difference in our world.
+              An inter-denominational prayer ministry with headquarters in Lagos State, Nigeria, interceding for all humanity and preaching the gospel of our Lord Jesus Christ all over the world.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex gap-3 flex-wrap">
               <a 
                 href="#" 
                 className="w-8 h-8 bg-background/20 rounded-full flex items-center justify-center text-background hover:bg-primary transition-colors"
@@ -48,10 +48,18 @@ export default function Footer() {
               >
                 <Youtube className="h-4 w-4" />
               </a>
+              <a 
+                href="https://t.me/+sF8-2UwQoXxkNDdk" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 h-8 bg-background/20 rounded-full flex items-center justify-center text-background hover:bg-primary transition-colors"
+                data-testid="link-telegram"
+              >
+                <SiTelegram className="h-4 w-4" />
+              </a>
             </div>
           </div>
           
-          {/* Quick Links */}
           <div>
             <h4 className="font-semibold text-background mb-6">Quick Links</h4>
             <ul className="space-y-3">
@@ -64,49 +72,49 @@ export default function Footer() {
             </ul>
           </div>
           
-          {/* Programs */}
           <div>
             <h4 className="font-semibold text-background mb-6">Our Programs</h4>
             <ul className="space-y-3">
-              <li><a href="#" className="text-background/80 hover:text-background transition-colors">Community Outreach</a></li>
-              <li><a href="#" className="text-background/80 hover:text-background transition-colors">Prayer Ministry</a></li>
-              <li><a href="#" className="text-background/80 hover:text-background transition-colors">Discipleship</a></li>
-              <li><a href="#" className="text-background/80 hover:text-background transition-colors">Counseling Support</a></li>
-              <li><a href="#" className="text-background/80 hover:text-background transition-colors">Youth Programs</a></li>
-              <li><a href="#" className="text-background/80 hover:text-background transition-colors">Emergency Aid</a></li>
+              <li><a href="#" className="text-background/80 hover:text-background transition-colors">Gospel Outreach</a></li>
+              <li><a href="#" className="text-background/80 hover:text-background transition-colors">Intercession Ministry</a></li>
+              <li><a href="#" className="text-background/80 hover:text-background transition-colors">Missions (Nigeria & Abroad)</a></li>
+              <li><a href="#" className="text-background/80 hover:text-background transition-colors">Healing & Deliverance</a></li>
+              <li><a href="#" className="text-background/80 hover:text-background transition-colors">Orphanage & Widow Care</a></li>
+              <li><a href="#" className="text-background/80 hover:text-background transition-colors">Educational Institutions</a></li>
             </ul>
           </div>
           
-          {/* Contact Info */}
           <div>
             <h4 className="font-semibold text-background mb-6">Contact Information</h4>
             <div className="space-y-4">
-              <div className="flex items-start space-x-3">
-                <MapPin className="text-background/80 mt-1 h-4 w-4" />
-                <p className="text-background/80">123 Faith Avenue<br />Community City, CC 12345</p>
+              <div className="flex items-start gap-3">
+                <MapPin className="text-background/80 mt-1 h-4 w-4 flex-shrink-0" />
+                <p className="text-background/80">Lagos State, Nigeria</p>
               </div>
-              <div className="flex items-center space-x-3">
-                <Phone className="text-background/80 h-4 w-4" />
-                <p className="text-background/80">+1 (555) 123-PRAY</p>
+              <div className="flex items-center gap-3">
+                <Phone className="text-background/80 h-4 w-4 flex-shrink-0" />
+                <div>
+                  <p className="text-background/80">+234 802 381 8547</p>
+                  <p className="text-background/80">+234 903 787 7197</p>
+                </div>
               </div>
-              <div className="flex items-center space-x-3">
-                <Mail className="text-background/80 h-4 w-4" />
-                <p className="text-background/80">info@covenantcare.org</p>
+              <div className="flex items-center gap-3">
+                <Mail className="text-background/80 h-4 w-4 flex-shrink-0" />
+                <p className="text-background/80 break-all">info@covenantcarefoundation.com.ng</p>
               </div>
-              <div className="flex items-start space-x-3">
-                <Clock className="text-background/80 mt-1 h-4 w-4" />
+              <div className="flex items-start gap-3">
+                <Clock className="text-background/80 mt-1 h-4 w-4 flex-shrink-0" />
                 <p className="text-background/80">Mon-Fri: 9AM-6PM<br />Sat: 10AM-4PM</p>
               </div>
             </div>
           </div>
         </div>
         
-        {/* Bottom Bar */}
-        <div className="border-t border-background/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-background/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-background/60 text-sm">
-            © 2024 Covenant Care Christian Prayer Partner Foundation. All rights reserved.
+            &copy; {new Date().getFullYear()} Covenant Care Christian Prayer Partner Foundation. All rights reserved.
           </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
+          <div className="flex gap-6 flex-wrap">
             <a href="#" className="text-background/60 hover:text-background text-sm transition-colors">Privacy Policy</a>
             <a href="#" className="text-background/60 hover:text-background text-sm transition-colors">Terms of Service</a>
             <a href="#" className="text-background/60 hover:text-background text-sm transition-colors">Donate</a>
