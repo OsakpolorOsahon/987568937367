@@ -1,12 +1,21 @@
 import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
-import { useRef } from "react";
 import { Check } from "lucide-react";
 
-export default function ServicesSection() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.3 });
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
 
+const cardVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+};
+
+export default function ServicesSection() {
   const programs = [
     {
       title: "Community Outreach & Missions",
@@ -51,20 +60,33 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section className="bg-background py-20" ref={ref}>
+    <section className="bg-background py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6 }}
+        >
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Programs & Services</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             From prayer support to community outreach, we offer various programs designed to fulfil the Great Commission and serve those in need.
           </p>
-        </div>
+        </motion.div>
         
-        <div className="grid lg:grid-cols-2 gap-12">
+        <motion.div
+          className="grid lg:grid-cols-2 gap-12"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+        >
           {programs.map((program) => (
-            <div
+            <motion.div
               key={program.title}
               className="card-hover bg-card p-8 rounded-2xl shadow-lg"
+              variants={cardVariants}
             >
               <div className="flex items-start gap-6">
                 <img 
@@ -87,9 +109,9 @@ export default function ServicesSection() {
                   </ul>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

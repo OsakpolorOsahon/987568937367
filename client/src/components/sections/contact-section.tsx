@@ -1,6 +1,4 @@
 import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
-import { useRef } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { insertContactSchema } from "@shared/schema";
@@ -16,8 +14,6 @@ import { useToast } from "@/hooks/use-toast";
 import type { InsertContact } from "@shared/schema";
 
 export default function ContactSection() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.3 });
   const { toast } = useToast();
   const queryClient = useQueryClient();
 
@@ -59,17 +55,28 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="bg-background py-20" ref={ref}>
+    <section className="bg-background py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6 }}
+        >
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Get In Touch</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Whether you need prayer, want to volunteer, or have questions about our programs, we'd love to hear from you.
           </p>
-        </div>
+        </motion.div>
         
         <div className="grid lg:grid-cols-2 gap-12">
-          <div>
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6 }}
+          >
             <div className="bg-card p-8 rounded-2xl shadow-lg">
               <h3 className="text-2xl font-bold text-foreground mb-6">Send Us a Message</h3>
               <Form {...form}>
@@ -173,9 +180,14 @@ export default function ContactSection() {
                 </form>
               </Form>
             </div>
-          </div>
+          </motion.div>
           
-          <div>
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+          >
             <div className="space-y-8">
               <div>
                 <h3 className="text-2xl font-bold text-foreground mb-6">Contact Information</h3>
@@ -223,7 +235,7 @@ export default function ContactSection() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

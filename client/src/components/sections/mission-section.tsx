@@ -1,12 +1,21 @@
 import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
-import { useRef } from "react";
 import { Heart, HandHeart, Sprout, Globe, BookOpen, Home } from "lucide-react";
 
-export default function MissionSection() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.3 });
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.12,
+    },
+  },
+};
 
+const cardVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+};
+
+export default function MissionSection() {
   const objectives = [
     {
       icon: Globe,
@@ -53,22 +62,35 @@ export default function MissionSection() {
   ];
 
   return (
-    <section className="bg-muted py-20" ref={ref}>
+    <section className="bg-muted py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6 }}
+        >
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Aims & Objectives</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Guided by the Holy Spirit, we strive to fulfil the Great Commission through prayer, service, and compassionate outreach to all humanity.
           </p>
-        </div>
+        </motion.div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+        >
           {objectives.map((objective) => {
             const IconComponent = objective.icon;
             return (
-              <div
+              <motion.div
                 key={objective.title}
                 className="card-hover bg-card p-8 rounded-2xl text-center shadow-lg"
+                variants={cardVariants}
               >
                 <div className={`w-16 h-16 ${objective.bgColor} rounded-full flex items-center justify-center mx-auto mb-6`}>
                   <IconComponent className={`${objective.textColor} h-8 w-8`} />
@@ -77,10 +99,10 @@ export default function MissionSection() {
                 <p className="text-muted-foreground leading-relaxed">
                   {objective.description}
                 </p>
-              </div>
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

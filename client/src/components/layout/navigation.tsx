@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
+import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Heart, Menu, X } from "lucide-react";
 import logoImage from "@assets/CPP_LOGO_(1)_1771413757122.png";
@@ -24,7 +25,6 @@ export default function Navigation() {
     <nav className="bg-card/95 backdrop-blur-sm shadow-sm border-b border-border sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
           <Link href="/" className="flex items-center" data-testid="logo-link">
             <img 
               src={logoImage} 
@@ -33,13 +33,12 @@ export default function Navigation() {
             />
           </Link>
           
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`nav-link text-foreground hover:text-primary font-medium ${
+                className={`nav-link text-foreground hover:text-primary font-medium transition-colors ${
                   isActiveLink(link.href) ? "text-primary" : ""
                 }`}
                 data-testid={`nav-link-${link.label.toLowerCase()}`}
@@ -48,14 +47,13 @@ export default function Navigation() {
               </Link>
             ))}
             <Button 
-              className="bg-primary text-primary-foreground hover:bg-primary/90 font-medium shadow-md hover:shadow-lg"
+              className="bg-primary text-primary-foreground font-medium shadow-md"
               data-testid="button-join-us"
             >
               Join Us
             </Button>
           </div>
           
-          {/* Mobile Menu Button */}
           <div className="md:hidden">
             <Button
               variant="ghost"
@@ -73,32 +71,51 @@ export default function Navigation() {
         </div>
       </div>
       
-      {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden bg-card border-t border-border">
-          <div className="px-4 py-4 space-y-4">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`block text-foreground hover:text-primary font-medium py-2 ${
-                  isActiveLink(link.href) ? "text-primary" : ""
-                }`}
-                onClick={() => setIsMobileMenuOpen(false)}
-                data-testid={`mobile-nav-link-${link.label.toLowerCase()}`}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            className="md:hidden bg-card border-t border-border overflow-hidden"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.25, ease: "easeInOut" }}
+          >
+            <div className="px-4 py-4 space-y-4">
+              {navLinks.map((link, index) => (
+                <motion.div
+                  key={link.href}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.2, delay: index * 0.05 }}
+                >
+                  <Link
+                    href={link.href}
+                    className={`block text-foreground hover:text-primary font-medium py-2 transition-colors ${
+                      isActiveLink(link.href) ? "text-primary" : ""
+                    }`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    data-testid={`mobile-nav-link-${link.label.toLowerCase()}`}
+                  >
+                    {link.label}
+                  </Link>
+                </motion.div>
+              ))}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.2, delay: navLinks.length * 0.05 }}
               >
-                {link.label}
-              </Link>
-            ))}
-            <Button 
-              className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-medium"
-              data-testid="mobile-button-join-us"
-            >
-              Join Us
-            </Button>
-          </div>
-        </div>
-      )}
+                <Button 
+                  className="w-full bg-primary text-primary-foreground font-medium"
+                  data-testid="mobile-button-join-us"
+                >
+                  Join Us
+                </Button>
+              </motion.div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 }

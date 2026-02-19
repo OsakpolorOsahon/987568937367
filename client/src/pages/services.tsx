@@ -112,17 +112,20 @@ export default function Services() {
       {/* Services Grid */}
       <section className="section-gradient py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-8">
-            {services.map((service, index) => {
+          <motion.div
+            className="grid lg:grid-cols-2 gap-8"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.05 }}
+            variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.12 } } }}
+          >
+            {services.map((service) => {
               const IconComponent = service.icon;
               return (
                 <motion.div
                   key={service.title}
                   className="card-hover bg-card p-8 rounded-2xl shadow-lg"
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  variants={{ hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } } }}
                 >
                   <div className="flex items-start space-x-6">
                     <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
@@ -168,7 +171,7 @@ export default function Services() {
                 </motion.div>
               );
             })}
-          </div>
+          </motion.div>
         </div>
       </section>
 

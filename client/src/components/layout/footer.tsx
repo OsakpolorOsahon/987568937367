@@ -1,14 +1,35 @@
+import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Clock, Facebook, Twitter, Instagram, Youtube } from "lucide-react";
 import { SiTelegram } from "react-icons/si";
 import { Link } from "wouter";
 import logoImage from "@assets/CPP_LOGO_(1)_1771413757122.png";
 
+const columnVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.12,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 25 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+};
+
 export default function Footer() {
   return (
     <footer className="bg-foreground text-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
-          <div>
+        <motion.div
+          className="grid lg:grid-cols-4 md:grid-cols-2 gap-8"
+          variants={columnVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+        >
+          <motion.div variants={itemVariants}>
             <div className="flex items-center mb-6">
               <img 
                 src={logoImage} 
@@ -58,9 +79,9 @@ export default function Footer() {
                 <SiTelegram className="h-4 w-4" />
               </a>
             </div>
-          </div>
+          </motion.div>
           
-          <div>
+          <motion.div variants={itemVariants}>
             <h4 className="font-semibold text-background mb-6">Quick Links</h4>
             <ul className="space-y-3">
               <li><Link href="/" className="text-background/80 hover:text-background transition-colors">Home</Link></li>
@@ -70,9 +91,9 @@ export default function Footer() {
               <li><a href="#" className="text-background/80 hover:text-background transition-colors">Prayer Requests</a></li>
               <li><a href="#" className="text-background/80 hover:text-background transition-colors">Volunteer</a></li>
             </ul>
-          </div>
+          </motion.div>
           
-          <div>
+          <motion.div variants={itemVariants}>
             <h4 className="font-semibold text-background mb-6">Our Programs</h4>
             <ul className="space-y-3">
               <li><a href="#" className="text-background/80 hover:text-background transition-colors">Gospel Outreach</a></li>
@@ -82,9 +103,9 @@ export default function Footer() {
               <li><a href="#" className="text-background/80 hover:text-background transition-colors">Orphanage & Widow Care</a></li>
               <li><a href="#" className="text-background/80 hover:text-background transition-colors">Educational Institutions</a></li>
             </ul>
-          </div>
+          </motion.div>
           
-          <div>
+          <motion.div variants={itemVariants}>
             <h4 className="font-semibold text-background mb-6">Contact Information</h4>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
@@ -107,10 +128,16 @@ export default function Footer() {
                 <p className="text-background/80">Mon-Fri: 9AM-6PM<br />Sat: 10AM-4PM</p>
               </div>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
         
-        <div className="border-t border-background/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <motion.div
+          className="border-t border-background/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
           <p className="text-background/60 text-sm">
             &copy; {new Date().getFullYear()} Covenant Care Christian Prayer Partner Foundation. All rights reserved.
           </p>
@@ -119,7 +146,7 @@ export default function Footer() {
             <a href="#" className="text-background/60 hover:text-background text-sm transition-colors">Terms of Service</a>
             <a href="#" className="text-background/60 hover:text-background text-sm transition-colors">Donate</a>
           </div>
-        </div>
+        </motion.div>
       </div>
     </footer>
   );

@@ -100,17 +100,20 @@ export default function About() {
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => {
+          <motion.div
+            className="grid md:grid-cols-4 gap-8"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}
+          >
+            {stats.map((stat) => {
               const IconComponent = stat.icon;
               return (
                 <motion.div
                   key={stat.label}
                   className="text-center"
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  variants={{ hidden: { opacity: 0, y: 40, scale: 0.95 }, visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.5, ease: "easeOut" } } }}
                 >
                   <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
                     <IconComponent className="text-primary-foreground h-8 w-8" />
@@ -120,7 +123,7 @@ export default function About() {
                 </motion.div>
               );
             })}
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -140,17 +143,20 @@ export default function About() {
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-3 gap-8">
-            {values.map((value, index) => {
+          <motion.div
+            className="grid md:grid-cols-3 gap-8"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+            variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.15 } } }}
+          >
+            {values.map((value) => {
               const IconComponent = value.icon;
               return (
                 <motion.div
                   key={value.title}
                   className="card-hover bg-card p-8 rounded-2xl shadow-lg text-center"
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.2 }}
+                  variants={{ hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } } }}
                 >
                   <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                     <IconComponent className="text-primary-foreground h-8 w-8" />
@@ -160,7 +166,7 @@ export default function About() {
                 </motion.div>
               );
             })}
-          </div>
+          </motion.div>
         </div>
       </section>
     </div>
