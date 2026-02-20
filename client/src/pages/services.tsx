@@ -125,15 +125,15 @@ export default function Services() {
               return (
                 <motion.div
                   key={service.title}
-                  className="card-hover bg-card p-8 rounded-2xl shadow-lg"
+                  className="card-hover bg-card p-4 sm:p-8 rounded-2xl shadow-lg overflow-hidden"
                   variants={{ hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } } }}
                 >
-                  <div className="flex items-start space-x-6">
-                    <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
-                      <IconComponent className="text-primary-foreground h-8 w-8" />
+                  <div className="flex flex-col sm:flex-row sm:items-start sm:space-x-6">
+                    <div className="w-14 h-14 sm:w-16 sm:h-16 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mb-4 sm:mb-0">
+                      <IconComponent className="text-primary-foreground h-7 w-7 sm:h-8 sm:w-8" />
                     </div>
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-bold text-foreground mb-3">{service.title}</h3>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3">{service.title}</h3>
                       <p className="text-muted-foreground mb-6 leading-relaxed">
                         {service.description}
                       </p>
@@ -142,9 +142,9 @@ export default function Services() {
                         <h4 className="font-semibold text-foreground mb-3">What We Offer:</h4>
                         <ul className="space-y-2">
                           {service.features.map((feature, featureIndex) => (
-                            <li key={featureIndex} className="flex items-center text-muted-foreground">
-                              <div className="w-2 h-2 bg-primary rounded-full mr-3 flex-shrink-0"></div>
-                              {feature}
+                            <li key={featureIndex} className="flex items-start text-muted-foreground">
+                              <div className="w-2 h-2 bg-primary rounded-full mr-3 flex-shrink-0 mt-2"></div>
+                              <span className="break-words">{feature}</span>
                             </li>
                           ))}
                         </ul>
@@ -152,12 +152,12 @@ export default function Services() {
                       
                       <div className="space-y-3 mb-6">
                         <div className="flex items-center text-sm text-muted-foreground">
-                          <Clock className="h-4 w-4 mr-2 text-primary" />
+                          <Clock className="h-4 w-4 mr-2 text-primary flex-shrink-0" />
                           <span>{service.schedule}</span>
                         </div>
                         <div className="flex items-center text-sm text-muted-foreground">
-                          <Phone className="h-4 w-4 mr-2 text-primary" />
-                          <span>{service.contact}</span>
+                          <Phone className="h-4 w-4 mr-2 text-primary flex-shrink-0" />
+                          <span className="break-all">{service.contact}</span>
                         </div>
                       </div>
                       
