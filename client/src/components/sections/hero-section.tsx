@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { PlayCircle, HandHeart } from "lucide-react";
+import { Heart, HandHeart } from "lucide-react";
 import { SiTelegram } from "react-icons/si";
 import logoImage from "@assets/CPP_LOGO_(1)_1771413757122.png";
 import { getWhatsAppLink } from "@/lib/whatsapp";
@@ -292,15 +292,17 @@ export default function HeroSection() {
                 Join Our Telegram Prayer Group
               </Button>
             </a>
-            <Button 
-              size="lg"
-              variant="outline"
-              className="border-2 border-orange-400 text-orange-400 font-semibold text-lg backdrop-blur-sm bg-white/5"
-              data-testid="button-watch-story"
-            >
-              <PlayCircle className="mr-2 h-5 w-5" />
-              Watch Our Story
-            </Button>
+            <a href={getWhatsAppLink("Hello Covenant Care Foundation! I'd like to make a donation to support your ministry. Please share the details on how I can give.")} target="_blank" rel="noopener noreferrer" data-testid="link-donate">
+              <Button 
+                size="lg"
+                variant="outline"
+                className="border-2 border-orange-400 text-orange-400 font-semibold text-lg backdrop-blur-sm bg-white/5"
+                data-testid="button-donate"
+              >
+                <Heart className="mr-2 h-5 w-5" />
+                Support Our Mission
+              </Button>
+            </a>
           </div>
         </motion.div>
       </div>

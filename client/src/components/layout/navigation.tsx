@@ -2,9 +2,20 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Heart, Menu, X } from "lucide-react";
+import { Menu, X, Facebook, Instagram, Youtube } from "lucide-react";
+import { SiTelegram, SiTiktok } from "react-icons/si";
+import { FaXTwitter } from "react-icons/fa6";
 import logoImage from "@assets/CPP_LOGO_(1)_1771413757122.png";
 import { getWhatsAppLink } from "@/lib/whatsapp";
+
+const socialLinks = [
+  { href: "https://www.facebook.com/covenantcarefoundation", icon: Facebook, label: "Facebook" },
+  { href: "https://x.com/covenantcarecpp", icon: FaXTwitter, label: "X" },
+  { href: "https://www.instagram.com/covenantcarefoundation", icon: Instagram, label: "Instagram" },
+  { href: "https://www.youtube.com/@covenantcarefoundation", icon: Youtube, label: "YouTube" },
+  { href: "https://www.tiktok.com/@covenantcarefoundation", icon: SiTiktok, label: "TikTok" },
+  { href: "https://t.me/+sF8-2UwQoXxkNDdk", icon: SiTelegram, label: "Telegram" },
+];
 
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -116,6 +127,32 @@ export default function Navigation() {
                     Join Us
                   </Button>
                 </a>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.2, delay: (navLinks.length + 1) * 0.05 }}
+              >
+                <div className="border-t border-border pt-4 mt-2">
+                  <p className="text-sm text-muted-foreground mb-3">Follow Us</p>
+                  <div className="flex gap-3">
+                    {socialLinks.map((social) => {
+                      const IconComponent = social.icon;
+                      return (
+                        <a
+                          key={social.label}
+                          href={social.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-9 h-9 bg-muted rounded-full flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
+                          data-testid={`mobile-link-${social.label.toLowerCase()}`}
+                        >
+                          <IconComponent className="h-4 w-4" />
+                        </a>
+                      );
+                    })}
+                  </div>
+                </div>
               </motion.div>
             </div>
           </motion.div>

@@ -4,8 +4,25 @@ This is a full-stack web application for Covenant Care Christian Prayer Partner 
 
 ## WhatsApp Integration
 - All forms (General Contact, Prayer Request, Volunteer, Homepage Contact) redirect to WhatsApp (+2349037877197) with pre-filled messages instead of API calls
-- All "Join Us", "Learn More", "Get Help Now", "Volunteer With Us", and "Join Our Mission" buttons open WhatsApp with contextual pre-typed messages
+- All "Join Us", "Learn More", "Get Help Now", "Volunteer With Us", "Join Our Mission", and "Support Our Mission" (donate) buttons open WhatsApp with contextual pre-typed messages
 - Shared utility: `client/src/lib/whatsapp.ts` centralizes WhatsApp number, message builders, and link generation
+
+## Social Media Links
+- Facebook: https://www.facebook.com/covenantcarefoundation
+- X (Twitter): https://x.com/covenantcarecpp
+- Instagram: https://www.instagram.com/covenantcarefoundation
+- YouTube: https://www.youtube.com/@covenantcarefoundation
+- TikTok: https://www.tiktok.com/@covenantcarefoundation
+- Telegram: https://t.me/+sF8-2UwQoXxkNDdk
+
+## Pages
+- Home (/), About (/about), Services (/services), Contact (/contact)
+- Terms of Service (/terms), Privacy Policy (/privacy)
+
+## Navigation Features
+- ScrollToTop component ensures pages always load from the top
+- overflow-x: hidden prevents horizontal scrolling on mobile
+- Social icons in mobile dropdown menu and footer
 
 # User Preferences
 
