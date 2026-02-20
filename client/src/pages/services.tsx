@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Heart, HandHeart, Sprout, Phone, Users, Calendar, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { getWhatsAppLink } from "@/lib/whatsapp";
 
 export default function Services() {
   const services = [
@@ -160,12 +161,14 @@ export default function Services() {
                         </div>
                       </div>
                       
-                      <Button 
-                        className="bg-primary text-primary-foreground hover:bg-primary/90"
-                        data-testid={`button-learn-more-${service.title.toLowerCase().replace(/\s+/g, '-')}`}
-                      >
-                        Learn More
-                      </Button>
+                      <a href={getWhatsAppLink(`Hello Covenant Care Foundation! I'd like to learn more about your ${service.title} program. Please share more details with me.`)} target="_blank" rel="noopener noreferrer">
+                        <Button 
+                          className="bg-primary text-primary-foreground"
+                          data-testid={`button-learn-more-${service.title.toLowerCase().replace(/\s+/g, '-')}`}
+                        >
+                          Learn More
+                        </Button>
+                      </a>
                     </div>
                   </div>
                 </motion.div>
@@ -191,21 +194,25 @@ export default function Services() {
               Whether you're seeking spiritual guidance, need practical assistance, or want to volunteer your time and talents, we're here to help and welcome your participation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg"
-                className="bg-primary text-primary-foreground hover:bg-primary/90"
-                data-testid="button-get-help"
-              >
-                Get Help Now
-              </Button>
-              <Button 
-                size="lg"
-                variant="outline"
-                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-                data-testid="button-volunteer"
-              >
-                Volunteer With Us
-              </Button>
+              <a href={getWhatsAppLink("Hello Covenant Care Foundation! I need help and support. Please assist me.")} target="_blank" rel="noopener noreferrer" data-testid="link-get-help">
+                <Button 
+                  size="lg"
+                  className="bg-primary text-primary-foreground"
+                  data-testid="button-get-help"
+                >
+                  Get Help Now
+                </Button>
+              </a>
+              <a href={getWhatsAppLink("Hello Covenant Care Foundation! I'd like to volunteer my time and talents. Please tell me how I can serve.")} target="_blank" rel="noopener noreferrer" data-testid="link-volunteer">
+                <Button 
+                  size="lg"
+                  variant="outline"
+                  className="border-primary text-primary"
+                  data-testid="button-volunteer"
+                >
+                  Volunteer With Us
+                </Button>
+              </a>
             </div>
           </motion.div>
         </div>

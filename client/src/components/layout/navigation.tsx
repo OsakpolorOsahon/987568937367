@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Heart, Menu, X } from "lucide-react";
 import logoImage from "@assets/CPP_LOGO_(1)_1771413757122.png";
+import { getWhatsAppLink } from "@/lib/whatsapp";
 
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -46,12 +47,14 @@ export default function Navigation() {
                 {link.label}
               </Link>
             ))}
-            <Button 
-              className="bg-primary text-primary-foreground font-medium shadow-md"
-              data-testid="button-join-us"
-            >
-              Join Us
-            </Button>
+            <a href={getWhatsAppLink("Hello Covenant Care Foundation! I'd like to join your community and learn more about how I can be involved.")} target="_blank" rel="noopener noreferrer" data-testid="link-join-us">
+              <Button 
+                className="bg-primary text-primary-foreground font-medium shadow-md"
+                data-testid="button-join-us"
+              >
+                Join Us
+              </Button>
+            </a>
           </div>
           
           <div className="md:hidden">
@@ -105,12 +108,14 @@ export default function Navigation() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.2, delay: navLinks.length * 0.05 }}
               >
-                <Button 
-                  className="w-full bg-primary text-primary-foreground font-medium"
-                  data-testid="mobile-button-join-us"
-                >
-                  Join Us
-                </Button>
+                <a href={getWhatsAppLink("Hello Covenant Care Foundation! I'd like to join your community and learn more about how I can be involved.")} target="_blank" rel="noopener noreferrer" data-testid="mobile-link-join-us">
+                  <Button 
+                    className="w-full bg-primary text-primary-foreground font-medium"
+                    data-testid="mobile-button-join-us"
+                  >
+                    Join Us
+                  </Button>
+                </a>
               </motion.div>
             </div>
           </motion.div>

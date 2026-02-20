@@ -2,6 +2,11 @@
 
 This is a full-stack web application for Covenant Care Christian Prayer Partner Foundation - a faith-based organization that connects communities through prayer and serves them through various outreach programs. The application features a modern React frontend with a Node.js/Express backend, designed to facilitate community engagement, prayer requests, volunteer coordination, and contact management.
 
+## WhatsApp Integration
+- All forms (General Contact, Prayer Request, Volunteer, Homepage Contact) redirect to WhatsApp (+2349037877197) with pre-filled messages instead of API calls
+- All "Join Us", "Learn More", "Get Help Now", "Volunteer With Us", and "Join Our Mission" buttons open WhatsApp with contextual pre-typed messages
+- Shared utility: `client/src/lib/whatsapp.ts` centralizes WhatsApp number, message builders, and link generation
+
 # User Preferences
 
 Preferred communication style: Simple, everyday language.

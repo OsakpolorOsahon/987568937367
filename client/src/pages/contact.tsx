@@ -10,16 +10,13 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Checkbox } from "@/components/ui/checkbox";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
+import { openWhatsApp, buildContactMessage, buildPrayerRequestMessage, buildVolunteerMessage } from "@/lib/whatsapp";
 import type { InsertContact, InsertPrayerRequest, InsertVolunteer } from "@shared/schema";
 
 export default function Contact() {
   const { toast } = useToast();
-  const queryClient = useQueryClient();
 
-  // Contact Form
   const contactForm = useForm<InsertContact>({
     resolver: zodResolver(insertContactSchema),
     defaultValues: {
@@ -31,7 +28,6 @@ export default function Contact() {
     },
   });
 
-  // Prayer Request Form
   const prayerForm = useForm<InsertPrayerRequest>({
     resolver: zodResolver(insertPrayerRequestSchema),
     defaultValues: {
@@ -43,7 +39,6 @@ export default function Contact() {
     },
   });
 
-  // Volunteer Form
   const volunteerForm = useForm<InsertVolunteer>({
     resolver: zodResolver(insertVolunteerSchema),
     defaultValues: {
@@ -57,73 +52,35 @@ export default function Contact() {
     },
   });
 
-  // Mutations
-  const submitContactMutation = useMutation({
-    mutationFn: async (data: InsertContact) => {
-      return await apiRequest("POST", "/api/contacts", data);
-    },
-    onSuccess: () => {
-      toast({
-        title: "Message sent!",
-        description: "Thank you for contacting us. We'll get back to you soon.",
-      });
-      contactForm.reset();
-      queryClient.invalidateQueries({ queryKey: ["/api/contacts"] });
-    },
-    onError: () => {
-      toast({
-        title: "Error",
-        description: "Failed to send message. Please try again.",
-        variant: "destructive",
-      });
-    },
-  });
+  const handleContactSubmit = (data: InsertContact) => {
+    openWhatsApp(buildContactMessage(data));
+    toast({
+      title: "Opening WhatsApp...",
+      description: "Your message has been prepared. Just tap Send in WhatsApp!",
+    });
+    contactForm.reset();
+  };
 
-  const submitPrayerMutation = useMutation({
-    mutationFn: async (data: InsertPrayerRequest) => {
-      return await apiRequest("POST", "/api/prayer-requests", data);
-    },
-    onSuccess: () => {
-      toast({
-        title: "Prayer request submitted!",
-        description: "We'll be praying for you. You're not alone.",
-      });
-      prayerForm.reset();
-      queryClient.invalidateQueries({ queryKey: ["/api/prayer-requests"] });
-    },
-    onError: () => {
-      toast({
-        title: "Error",
-        description: "Failed to submit prayer request. Please try again.",
-        variant: "destructive",
-      });
-    },
-  });
+  const handlePrayerSubmit = (data: InsertPrayerRequest) => {
+    openWhatsApp(buildPrayerRequestMessage({ ...data, isUrgent: data.isUrgent || "false" }));
+    toast({
+      title: "Opening WhatsApp...",
+      description: "Your prayer request is ready. Just tap Send in WhatsApp!",
+    });
+    prayerForm.reset();
+  };
 
-  const submitVolunteerMutation = useMutation({
-    mutationFn: async (data: InsertVolunteer) => {
-      return await apiRequest("POST", "/api/volunteers", data);
-    },
-    onSuccess: () => {
-      toast({
-        title: "Volunteer registration complete!",
-        description: "Thank you for your heart to serve. We'll contact you soon.",
-      });
-      volunteerForm.reset();
-      queryClient.invalidateQueries({ queryKey: ["/api/volunteers"] });
-    },
-    onError: () => {
-      toast({
-        title: "Error",
-        description: "Failed to register. Please try again.",
-        variant: "destructive",
-      });
-    },
-  });
+  const handleVolunteerSubmit = (data: InsertVolunteer) => {
+    openWhatsApp(buildVolunteerMessage(data));
+    toast({
+      title: "Opening WhatsApp...",
+      description: "Your registration is ready. Just tap Send in WhatsApp!",
+    });
+    volunteerForm.reset();
+  };
 
   return (
     <div>
-      {/* Hero Section */}
       <section className="hero-gradient text-primary-foreground py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
@@ -140,11 +97,9 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Contact Section */}
       <section className="section-gradient py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Forms */}
             <motion.div
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -163,7 +118,7 @@ export default function Contact() {
                   
                   <TabsContent value="contact" className="mt-6">
                     <Form {...contactForm}>
-                      <form onSubmit={contactForm.handleSubmit((data) => submitContactMutation.mutate(data))} className="space-y-4">
+                      <form onSubmit={contactForm.handleSubmit(handleContactSubmit)} className="space-y-4">
                         <div className="grid md:grid-cols-2 gap-4">
                           <FormField
                             control={contactForm.control}
@@ -252,12 +207,11 @@ export default function Contact() {
                         
                         <Button 
                           type="submit" 
-                          className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
-                          disabled={submitContactMutation.isPending}
+                          className="w-full bg-green-600 text-white"
                           data-testid="contact-button-submit"
                         >
                           <Send className="mr-2 h-4 w-4" />
-                          {submitContactMutation.isPending ? "Sending..." : "Send Message"}
+                          Send via WhatsApp
                         </Button>
                       </form>
                     </Form>
@@ -265,7 +219,7 @@ export default function Contact() {
                   
                   <TabsContent value="prayer" className="mt-6">
                     <Form {...prayerForm}>
-                      <form onSubmit={prayerForm.handleSubmit((data) => submitPrayerMutation.mutate(data))} className="space-y-4">
+                      <form onSubmit={prayerForm.handleSubmit(handlePrayerSubmit)} className="space-y-4">
                         <FormField
                           control={prayerForm.control}
                           name="name"
@@ -361,11 +315,11 @@ export default function Contact() {
                         
                         <Button 
                           type="submit" 
-                          className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
-                          disabled={submitPrayerMutation.isPending}
+                          className="w-full bg-green-600 text-white"
                           data-testid="prayer-button-submit"
                         >
-                          {submitPrayerMutation.isPending ? "Submitting..." : "Submit Prayer Request"}
+                          <Send className="mr-2 h-4 w-4" />
+                          Submit via WhatsApp
                         </Button>
                       </form>
                     </Form>
@@ -373,7 +327,7 @@ export default function Contact() {
                   
                   <TabsContent value="volunteer" className="mt-6">
                     <Form {...volunteerForm}>
-                      <form onSubmit={volunteerForm.handleSubmit((data) => submitVolunteerMutation.mutate(data))} className="space-y-4">
+                      <form onSubmit={volunteerForm.handleSubmit(handleVolunteerSubmit)} className="space-y-4">
                         <div className="grid md:grid-cols-2 gap-4">
                           <FormField
                             control={volunteerForm.control}
@@ -503,11 +457,11 @@ export default function Contact() {
                         
                         <Button 
                           type="submit" 
-                          className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
-                          disabled={submitVolunteerMutation.isPending}
+                          className="w-full bg-green-600 text-white"
                           data-testid="volunteer-button-submit"
                         >
-                          {submitVolunteerMutation.isPending ? "Registering..." : "Register as Volunteer"}
+                          <Send className="mr-2 h-4 w-4" />
+                          Register via WhatsApp
                         </Button>
                       </form>
                     </Form>
@@ -516,7 +470,6 @@ export default function Contact() {
               </div>
             </motion.div>
             
-            {/* Contact Information */}
             <motion.div
               initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
