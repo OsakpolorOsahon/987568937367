@@ -44,7 +44,7 @@ function App() {
         <div className="min-h-screen flex flex-col">
           <ScrollToTop />
           <Navigation />
-          <main className="flex-1">
+          <main className="flex-1 pt-16">
             <Router />
           </main>
           <Footer />
