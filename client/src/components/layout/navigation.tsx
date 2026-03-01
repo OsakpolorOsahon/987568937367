@@ -2,18 +2,16 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Facebook, Instagram, Youtube } from "lucide-react";
-import { SiTelegram, SiTiktok } from "react-icons/si";
+import { Menu, X, Instagram, Youtube } from "lucide-react";
+import { SiTelegram } from "react-icons/si";
 import { FaXTwitter } from "react-icons/fa6";
 import logoImage from "@assets/CPP_LOGO_(1)_1771413757122.png";
 import { getWhatsAppLink } from "@/lib/whatsapp";
 
 const socialLinks = [
-  { href: "https://www.facebook.com/covenantcarefoundation", icon: Facebook, label: "Facebook" },
   { href: "https://x.com/covenantcarecpp", icon: FaXTwitter, label: "X" },
   { href: "https://www.instagram.com/covenantcarefoundation", icon: Instagram, label: "Instagram" },
   { href: "https://www.youtube.com/@covenantcarefoundation", icon: Youtube, label: "YouTube" },
-  { href: "https://www.tiktok.com/@covenantcarefoundation", icon: SiTiktok, label: "TikTok" },
   { href: "https://t.me/+sF8-2UwQoXxkNDdk", icon: SiTelegram, label: "Telegram" },
 ];
 

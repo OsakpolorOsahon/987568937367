@@ -1,6 +1,7 @@
 import HeroSection from "@/components/sections/hero-section";
 import VideoSection from "@/components/sections/video-section";
 import AboutSection from "@/components/sections/about-section";
+import SupportMissionSection from "@/components/sections/support-mission-section";
 import MissionSection from "@/components/sections/mission-section";
 import ServicesSection from "@/components/sections/services-section";
 import TestimonialsSection from "@/components/sections/testimonials-section";
@@ -12,6 +13,7 @@ export default function Home() {
       <HeroSection />
       <VideoSection />
       <AboutSection />
+      <SupportMissionSection />
       <MissionSection />
       <ServicesSection />
       <TestimonialsSection />

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Youtube } from "lucide-react";
-import { SiTelegram, SiTiktok } from "react-icons/si";
+import { MapPin, Phone, Mail, Clock, Instagram, Youtube } from "lucide-react";
+import { SiTelegram } from "react-icons/si";
 import { FaXTwitter } from "react-icons/fa6";
 import { Link } from "wouter";
 import logoImage from "@assets/CPP_LOGO_(1)_1771413757122.png";
@@ -21,18 +21,16 @@ const itemVariants = {
 };
 
 const socialLinks = [
-  { href: "https://www.facebook.com/covenantcarefoundation", icon: Facebook, label: "Facebook" },
   { href: "https://x.com/covenantcarecpp", icon: FaXTwitter, label: "X" },
   { href: "https://www.instagram.com/covenantcarefoundation", icon: Instagram, label: "Instagram" },
   { href: "https://www.youtube.com/@covenantcarefoundation", icon: Youtube, label: "YouTube" },
-  { href: "https://www.tiktok.com/@covenantcarefoundation", icon: SiTiktok, label: "TikTok" },
   { href: "https://t.me/+sF8-2UwQoXxkNDdk", icon: SiTelegram, label: "Telegram" },
 ];
 
 export default function Footer() {
   return (
     <footer className="bg-foreground text-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
         <motion.div
           className="grid lg:grid-cols-4 md:grid-cols-2 gap-8"
           variants={columnVariants}
@@ -41,15 +39,15 @@ export default function Footer() {
           viewport={{ once: true, amount: 0.1 }}
         >
           <motion.div variants={itemVariants}>
-            <div className="flex items-center mb-6">
+            <div className="flex items-center mb-5">
               <img 
                 src={logoImage} 
                 alt="Covenant Care Christian Prayer Partner Foundation" 
                 className="h-14 w-auto object-contain bg-white/90 rounded-md p-1"
               />
             </div>
-            <p className="text-background/80 mb-6 leading-relaxed">
-              An inter-denominational prayer ministry with headquarters in Lagos State, Nigeria, interceding for all humanity and preaching the gospel of our Lord Jesus Christ all over the world.
+            <p className="text-background/80 mb-5 leading-relaxed">
+              Covenant Care Christian Prayer Partner Foundation — headquartered in Lagos State, Nigeria, reaching the vulnerable with healthcare, feeding, education, and compassionate care.
             </p>
             <div className="flex gap-3 flex-wrap">
               {socialLinks.map((social) => {
@@ -71,32 +69,32 @@ export default function Footer() {
           </motion.div>
           
           <motion.div variants={itemVariants}>
-            <h4 className="font-semibold text-background mb-6">Quick Links</h4>
-            <ul className="space-y-3">
+            <h4 className="font-semibold text-background mb-5">Quick Links</h4>
+            <ul className="space-y-2.5">
               <li><Link href="/" className="text-background/80 hover:text-background transition-colors" data-testid="footer-link-home">Home</Link></li>
               <li><Link href="/about" className="text-background/80 hover:text-background transition-colors" data-testid="footer-link-about">About Us</Link></li>
               <li><Link href="/services" className="text-background/80 hover:text-background transition-colors" data-testid="footer-link-programs">Our Programs</Link></li>
               <li><Link href="/contact" className="text-background/80 hover:text-background transition-colors" data-testid="footer-link-contact">Contact</Link></li>
-              <li><a href={getWhatsAppLink("Hello Covenant Care Foundation! I would like to submit a prayer request.")} target="_blank" rel="noopener noreferrer" className="text-background/80 hover:text-background transition-colors" data-testid="footer-link-prayer">Prayer Requests</a></li>
               <li><a href={getWhatsAppLink("Hello Covenant Care Foundation! I'd like to volunteer my time and talents. Please tell me how I can serve.")} target="_blank" rel="noopener noreferrer" className="text-background/80 hover:text-background transition-colors" data-testid="footer-link-volunteer">Volunteer</a></li>
+              <li><a href={getWhatsAppLink("Hello Covenant Care Foundation! I'd like to make a donation to support your care outreach. Please share the details.")} target="_blank" rel="noopener noreferrer" className="text-background/80 hover:text-background transition-colors" data-testid="footer-link-donate">Donate</a></li>
             </ul>
           </motion.div>
           
           <motion.div variants={itemVariants}>
-            <h4 className="font-semibold text-background mb-6">Our Programs</h4>
-            <ul className="space-y-3">
-              <li><a href={getWhatsAppLink("Hello Covenant Care Foundation! I'd like to learn more about your Gospel Outreach program.")} target="_blank" rel="noopener noreferrer" className="text-background/80 hover:text-background transition-colors" data-testid="footer-link-gospel-outreach">Gospel Outreach</a></li>
-              <li><a href={getWhatsAppLink("Hello Covenant Care Foundation! I'd like to learn more about your Intercession Ministry.")} target="_blank" rel="noopener noreferrer" className="text-background/80 hover:text-background transition-colors" data-testid="footer-link-intercession">Intercession Ministry</a></li>
-              <li><a href={getWhatsAppLink("Hello Covenant Care Foundation! I'd like to learn more about your Missions program.")} target="_blank" rel="noopener noreferrer" className="text-background/80 hover:text-background transition-colors" data-testid="footer-link-missions">Missions (Nigeria & Abroad)</a></li>
-              <li><a href={getWhatsAppLink("Hello Covenant Care Foundation! I'd like to learn more about your Healing & Deliverance ministry.")} target="_blank" rel="noopener noreferrer" className="text-background/80 hover:text-background transition-colors" data-testid="footer-link-healing">Healing & Deliverance</a></li>
-              <li><a href={getWhatsAppLink("Hello Covenant Care Foundation! I'd like to learn more about your Orphanage & Widow Care program.")} target="_blank" rel="noopener noreferrer" className="text-background/80 hover:text-background transition-colors" data-testid="footer-link-orphanage">Orphanage & Widow Care</a></li>
-              <li><a href={getWhatsAppLink("Hello Covenant Care Foundation! I'd like to learn more about your Educational Institutions.")} target="_blank" rel="noopener noreferrer" className="text-background/80 hover:text-background transition-colors" data-testid="footer-link-education">Educational Institutions</a></li>
+            <h4 className="font-semibold text-background mb-5">Our Programs</h4>
+            <ul className="space-y-2.5">
+              <li><a href={getWhatsAppLink("Hello Covenant Care Foundation! I'd like to learn more about your Healthcare Outreach program.")} target="_blank" rel="noopener noreferrer" className="text-background/80 hover:text-background transition-colors" data-testid="footer-link-healthcare">Healthcare Outreach</a></li>
+              <li><a href={getWhatsAppLink("Hello Covenant Care Foundation! I'd like to learn more about your Care Outreach & Missions.")} target="_blank" rel="noopener noreferrer" className="text-background/80 hover:text-background transition-colors" data-testid="footer-link-care-outreach">Care Outreach & Missions</a></li>
+              <li><a href={getWhatsAppLink("Hello Covenant Care Foundation! I'd like to learn more about your Orphanage & Child Care program.")} target="_blank" rel="noopener noreferrer" className="text-background/80 hover:text-background transition-colors" data-testid="footer-link-orphanage">Orphanage & Child Care</a></li>
+              <li><a href={getWhatsAppLink("Hello Covenant Care Foundation! I'd like to learn more about your Widow Care program.")} target="_blank" rel="noopener noreferrer" className="text-background/80 hover:text-background transition-colors" data-testid="footer-link-widow">Widow Care</a></li>
+              <li><a href={getWhatsAppLink("Hello Covenant Care Foundation! I'd like to learn more about your Academic Sponsorship program.")} target="_blank" rel="noopener noreferrer" className="text-background/80 hover:text-background transition-colors" data-testid="footer-link-education">Academic Sponsorship</a></li>
+              <li><a href={getWhatsAppLink("Hello Covenant Care Foundation! I'd like to learn more about your Feeding Programs.")} target="_blank" rel="noopener noreferrer" className="text-background/80 hover:text-background transition-colors" data-testid="footer-link-feeding">Feeding Programs</a></li>
             </ul>
           </motion.div>
           
           <motion.div variants={itemVariants}>
-            <h4 className="font-semibold text-background mb-6">Contact Information</h4>
-            <div className="space-y-4">
+            <h4 className="font-semibold text-background mb-5">Contact Information</h4>
+            <div className="space-y-3.5">
               <div className="flex items-start gap-3">
                 <MapPin className="text-background/80 mt-1 h-4 w-4 flex-shrink-0" />
                 <p className="text-background/80">Lagos State, Nigeria</p>
@@ -121,7 +119,7 @@ export default function Footer() {
         </motion.div>
         
         <motion.div
-          className="border-t border-background/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4"
+          className="border-t border-background/20 mt-10 pt-7 flex flex-col md:flex-row justify-between items-center gap-4"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -133,7 +131,7 @@ export default function Footer() {
           <div className="flex gap-6 flex-wrap">
             <Link href="/privacy" className="text-background/60 hover:text-background text-sm transition-colors" data-testid="footer-link-privacy">Privacy Policy</Link>
             <Link href="/terms" className="text-background/60 hover:text-background text-sm transition-colors" data-testid="footer-link-terms">Terms of Service</Link>
-            <a href={getWhatsAppLink("Hello Covenant Care Foundation! I'd like to make a donation to support your ministry. Please share the details.")} target="_blank" rel="noopener noreferrer" className="text-background/60 hover:text-background text-sm transition-colors" data-testid="footer-link-donate">Donate</a>
+            <a href={getWhatsAppLink("Hello Covenant Care Foundation! I'd like to make a donation to support your care outreach. Please share the details.")} target="_blank" rel="noopener noreferrer" className="text-background/60 hover:text-background text-sm transition-colors" data-testid="footer-link-donate-bottom">Donate</a>
           </div>
         </motion.div>
       </div>

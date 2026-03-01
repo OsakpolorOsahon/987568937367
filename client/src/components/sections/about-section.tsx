@@ -3,7 +3,7 @@ import { Users, Heart, Eye, Target } from "lucide-react";
 
 export default function AboutSection() {
   return (
-    <section className="section-gradient py-20">
+    <section className="section-gradient py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -13,8 +13,8 @@ export default function AboutSection() {
             transition={{ duration: 0.6 }}
           >
             <img 
-              src="https://images.unsplash.com/photo-1507692049790-de58290a4334?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
-              alt="Christian prayer group gathering" 
+              src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
+              alt="Covenant Care Foundation community outreach" 
               className="rounded-2xl shadow-xl w-full h-auto"
             />
           </motion.div>
@@ -25,22 +25,22 @@ export default function AboutSection() {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, delay: 0.15 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">About Covenant Care</h2>
-            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              The Covenant Prayer Partner International, with headquarters in Lagos State, Nigeria, exists to pray, intercede and preach the gospel of our Lord Jesus Christ all over the world -- delivering the oppressed, setting the captives free, healing the broken-hearted, and giving hope to motherless children and widows.
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">About Covenant Care</h2>
+            <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
+              Covenant Care Christian Prayer Partner Foundation, headquartered in Lagos State, Nigeria, is dedicated to transforming lives through practical care and compassion. We reach the vulnerable — orphans, widows, the sick, and the underprivileged — with tangible support and dignity.
             </p>
-            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              We are committed to comforting and supplying the needs of the vulnerable, strengthening them through Christ Jesus, and preparing a people for the eternal kingdom of God.
+            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+              Our work spans medical outreaches, feeding programs, academic sponsorship, orphanage support, widow care, and missionary outreach across Nigeria and beyond.
             </p>
             
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 gap-5">
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
                   <Eye className="text-primary-foreground h-6 w-6" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground">Our Vision</h4>
-                  <p className="text-sm text-muted-foreground">An inter-denominational prayer ministry of truly born again believers</p>
+                  <p className="text-sm text-muted-foreground">A Nigeria and world transformed by genuine care for every person</p>
                 </div>
               </div>
               
@@ -50,7 +50,7 @@ export default function AboutSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground">Our Mission</h4>
-                  <p className="text-sm text-muted-foreground">Raising a people of prayer, wisdom and power of God</p>
+                  <p className="text-sm text-muted-foreground">Delivering care outreach that restores dignity and builds futures</p>
                 </div>
               </div>
             </div>

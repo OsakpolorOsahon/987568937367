@@ -264,12 +264,12 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-white drop-shadow-2xl">
-            United in <span className="text-orange-400">Prayer</span>,<br />
-            Serving with <span className="text-orange-400">Love</span>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl mb-6 leading-tight text-white drop-shadow-2xl" style={{ fontFamily: "'Anton', sans-serif" }}>
+            Caring for <span className="text-orange-400">Communities</span>,<br />
+            Changing <span className="text-orange-400">Lives</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed text-white/95 drop-shadow-lg">
-            An inter-denominational prayer ministry raising a people of prayer, wisdom and power of God with purity and holiness in readiness for the second coming of our Lord and Saviour Jesus Christ.
+            Covenant Care Christian Prayer Partner Foundation — reaching the vulnerable through medical outreaches, feeding programs, orphan care, widow support, and educational sponsorship across Nigeria and beyond.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center flex-wrap">
             <a href={getWhatsAppLink("Hello Covenant Care Foundation! I'd like to join your mission and be part of your community. Please tell me how I can get involved.")} target="_blank" rel="noopener noreferrer" data-testid="link-join-mission">
@@ -292,7 +292,7 @@ export default function HeroSection() {
                 Join Our Telegram Prayer Group
               </Button>
             </a>
-            <a href={getWhatsAppLink("Hello Covenant Care Foundation! I'd like to make a donation to support your ministry. Please share the details on how I can give.")} target="_blank" rel="noopener noreferrer" data-testid="link-donate">
+            <a href={getWhatsAppLink("Hello Covenant Care Foundation! I'd like to make a donation to support your care outreach. Please share the details on how I can give.")} target="_blank" rel="noopener noreferrer" data-testid="link-donate">
               <Button 
                 size="lg"
                 variant="outline"
