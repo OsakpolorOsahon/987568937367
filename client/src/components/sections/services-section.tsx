@@ -1,5 +1,8 @@
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
+import medicalImg from "@assets/IMG-20260301-WA0085_1772706223404.jpg";
+import orphanageImg from "@assets/IMG-20260301-WA0087_1772706223343.jpg";
+import childrenImg from "@assets/IMG-20260301-WA0083_1772706223455.jpg";
 
 const containerVariants = {
   hidden: {},
@@ -20,7 +23,7 @@ export default function ServicesSection() {
     {
       title: "Medical & Healthcare Outreach",
       description: "Bringing free medical care directly to underserved communities through mobile clinics, health screenings, and essential medication distribution.",
-      image: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
+      image: medicalImg,
       features: [
         "Free medical consultations",
         "Health screenings & medication",
@@ -30,7 +33,7 @@ export default function ServicesSection() {
     {
       title: "Orphanage & Child Care",
       description: "Establishing and supporting motherless babies homes and orphanages, giving children shelter, nutrition, education, and a loving environment to thrive.",
-      image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
+      image: orphanageImg,
       features: [
         "Motherless babies homes",
         "Orphanage establishment & support",
@@ -50,7 +53,7 @@ export default function ServicesSection() {
     {
       title: "Feeding & Donation Outreach",
       description: "Running feeding programs and donation drives that ensure no family in our communities goes to bed hungry or lacking basic necessities.",
-      image: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
+      image: childrenImg,
       features: [
         "Community feeding programs",
         "Food & essentials distribution",

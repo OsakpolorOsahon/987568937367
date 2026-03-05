@@ -9,9 +9,9 @@ import logoImage from "@assets/CPP_LOGO_(1)_1771413757122.png";
 import { getWhatsAppLink } from "@/lib/whatsapp";
 
 const socialLinks = [
-  { href: "https://x.com/covenantcarecpp", icon: FaXTwitter, label: "X" },
+  { href: "https://x.com/cccppfoundation", icon: FaXTwitter, label: "X" },
   { href: "https://www.instagram.com/covenantcarefoundation", icon: Instagram, label: "Instagram" },
-  { href: "https://www.youtube.com/@covenantcarefoundation", icon: Youtube, label: "YouTube" },
+  { href: "https://youtube.com/@covenantcarefoundation", icon: Youtube, label: "YouTube" },
   { href: "https://t.me/+sF8-2UwQoXxkNDdk", icon: SiTelegram, label: "Telegram" },
 ];
 

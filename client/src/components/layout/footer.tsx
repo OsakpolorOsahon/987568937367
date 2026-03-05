@@ -21,9 +21,9 @@ const itemVariants = {
 };
 
 const socialLinks = [
-  { href: "https://x.com/covenantcarecpp", icon: FaXTwitter, label: "X" },
-  { href: "https://www.instagram.com/covenantcarefoundation", icon: Instagram, label: "Instagram" },
-  { href: "https://www.youtube.com/@covenantcarefoundation", icon: Youtube, label: "YouTube" },
+  { href: "https://x.com/cccppfoundation", icon: FaXTwitter, label: "X" },
+  { href: "https://www.instagram.com/covenantcarefoundation?igsh=MWl0bGl4NnpsYnZwMg%3D%3D&utm_source=qr", icon: Instagram, label: "Instagram" },
+  { href: "https://youtube.com/@covenantcarefoundation?si=E30ASWbEnCJgLQQC", icon: Youtube, label: "YouTube" },
   { href: "https://t.me/+sF8-2UwQoXxkNDdk", icon: SiTelegram, label: "Telegram" },
 ];
 

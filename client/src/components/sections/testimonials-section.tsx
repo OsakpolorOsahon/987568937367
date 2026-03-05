@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Star } from "lucide-react";
 
 const containerVariants = {
   hidden: {},
@@ -18,46 +17,46 @@ const cardVariants = {
 export default function TestimonialsSection() {
   const testimonials = [
     {
-      name: "Maria Johnson",
-      role: "Community Member",
-      content: "The prayer support I received during my difficult time was incredible. The community truly cares and demonstrates God's love in action.",
-      initials: "MJ",
+      name: "Adaeze Okonkwo",
+      role: "Beneficiary — Medical Outreach",
+      content: "The free medical outreach came to our community when we had no means to afford a hospital. The team was caring, professional, and genuinely concerned about our wellbeing. God bless Covenant Care.",
+      initials: "AO",
       bgColor: "bg-primary"
     },
     {
-      name: "David Thompson",
+      name: "Emmanuel Dike",
       role: "Volunteer",
-      content: "Serving with Covenant Care has been life-changing. It's amazing to see how small acts of kindness can make such a big difference.",
-      initials: "DT",
+      content: "Volunteering with Covenant Care has opened my eyes to what real service looks like. Seeing children at the orphanage receive supplies, and widows getting support — it changes you.",
+      initials: "ED",
       bgColor: "bg-secondary"
     },
     {
-      name: "Sarah Rodriguez",
-      role: "Prayer Partner",
-      content: "Being part of the prayer ministry has strengthened my faith tremendously. There's power in united prayer and genuine Christian fellowship.",
-      initials: "SR",
+      name: "Blessing Okoro",
+      role: "Beneficiary — Widow Care Program",
+      content: "After losing my husband, I didn't know how we would survive. Covenant Care provided food, school fees for my children, and people who genuinely cared. I am forever grateful.",
+      initials: "BO",
       bgColor: "bg-primary"
     }
   ];
 
   return (
-    <section className="bg-muted py-20">
+    <section className="bg-muted py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-12"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Lives Transformed</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">Lives Transformed</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Hear from community members whose lives have been touched through prayer and service.
+            Real stories from people whose lives have been touched through our care outreach programs.
           </p>
         </motion.div>
         
         <motion.div
-          className="grid md:grid-cols-3 gap-8"
+          className="grid md:grid-cols-3 gap-7"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -66,11 +65,11 @@ export default function TestimonialsSection() {
           {testimonials.map((testimonial) => (
             <motion.div
               key={testimonial.name}
-              className="card-hover bg-card p-8 rounded-2xl shadow-lg"
+              className="card-hover bg-card p-7 rounded-2xl shadow-lg"
               variants={cardVariants}
             >
               <div className="flex items-center mb-4">
-                <div className={`w-12 h-12 ${testimonial.bgColor} rounded-full flex items-center justify-center mr-4`}>
+                <div className={`w-12 h-12 ${testimonial.bgColor} rounded-full flex items-center justify-center mr-4 flex-shrink-0`}>
                   <span className="text-primary-foreground font-bold">{testimonial.initials}</span>
                 </div>
                 <div>
@@ -78,14 +77,9 @@ export default function TestimonialsSection() {
                   <p className="text-sm text-muted-foreground">{testimonial.role}</p>
                 </div>
               </div>
-              <p className="text-muted-foreground leading-relaxed mb-4">
+              <p className="text-muted-foreground leading-relaxed">
                 "{testimonial.content}"
               </p>
-              <div className="flex text-secondary">
-                {[...Array(5)].map((_, starIndex) => (
-                  <Star key={starIndex} className="h-4 w-4 fill-current" />
-                ))}
-              </div>
             </motion.div>
           ))}
         </motion.div>

@@ -292,7 +292,14 @@ export default function HeroSection() {
                 Join Our Telegram Prayer Group
               </Button>
             </a>
-            <a href={getWhatsAppLink("Hello Covenant Care Foundation! I'd like to make a donation to support your care outreach. Please share the details on how I can give.")} target="_blank" rel="noopener noreferrer" data-testid="link-donate">
+            <a
+              href="#support-our-mission"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById("support-our-mission")?.scrollIntoView({ behavior: "smooth" });
+              }}
+              data-testid="link-donate"
+            >
               <Button 
                 size="lg"
                 variant="outline"

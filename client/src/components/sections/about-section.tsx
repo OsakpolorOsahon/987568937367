@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Users, Heart, Eye, Target } from "lucide-react";
+import logoImg from "@assets/IMG-20260304-WA0071_1772706223266.jpg";
 
 export default function AboutSection() {
   return (
@@ -13,8 +14,8 @@ export default function AboutSection() {
             transition={{ duration: 0.6 }}
           >
             <img 
-              src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
-              alt="Covenant Care Foundation community outreach" 
+              src={logoImg}
+              alt="Covenant Care Foundation" 
               className="rounded-2xl shadow-xl w-full h-auto"
             />
           </motion.div>

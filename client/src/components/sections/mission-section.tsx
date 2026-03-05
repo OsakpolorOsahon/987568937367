@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Heart, HandHeart, Sprout, Globe, BookOpen, Home } from "lucide-react";
+import { Heart, HandHeart, Sprout, Globe, BookOpen, Home, Utensils, Stethoscope } from "lucide-react";
 
 const containerVariants = {
   hidden: {},
@@ -18,67 +18,67 @@ const cardVariants = {
 export default function MissionSection() {
   const objectives = [
     {
-      icon: Globe,
-      title: "Gospel Outreach",
-      description: "To preach the gospel of our Lord Jesus Christ all over the world, interceding for all humanity in the entire world.",
-      bgColor: "bg-primary",
-      textColor: "text-primary-foreground"
-    },
-    {
-      icon: Heart,
-      title: "Healing & Deliverance",
-      description: "To heal the sick, set the captives free, seek and save the lost, and deliver the oppressed through the power of Christ.",
-      bgColor: "bg-secondary",
-      textColor: "text-secondary-foreground"
-    },
-    {
-      icon: HandHeart,
-      title: "Missions & Intercession",
-      description: "To establish and maintain missions in Nigeria and abroad, propelled by the Holy Spirit to know the only true God and His Son Jesus Christ.",
+      icon: Stethoscope,
+      title: "Medical Outreach",
+      description: "To bring free healthcare — consultations, screenings, and medication — directly to underserved communities where access to medical care is limited.",
       bgColor: "bg-primary",
       textColor: "text-primary-foreground"
     },
     {
       icon: Home,
-      title: "Orphanage & Widow Care",
-      description: "To establish motherless babies homes, orphanages, and care for widows, providing for their needs and working with charitable organisations.",
+      title: "Orphanage & Child Care",
+      description: "To establish and support motherless babies homes and orphanages, providing children with shelter, nutrition, education, and a nurturing environment.",
+      bgColor: "bg-secondary",
+      textColor: "text-secondary-foreground"
+    },
+    {
+      icon: Heart,
+      title: "Widow Care & Support",
+      description: "To provide widows with practical assistance, provisions, and empowerment programs that restore their dignity and help them rebuild their lives.",
+      bgColor: "bg-primary",
+      textColor: "text-primary-foreground"
+    },
+    {
+      icon: Utensils,
+      title: "Feeding Programs",
+      description: "To run regular feeding initiatives ensuring vulnerable children, widows, the elderly, and families in need have access to nutritious meals.",
       bgColor: "bg-secondary",
       textColor: "text-secondary-foreground"
     },
     {
       icon: BookOpen,
-      title: "Educational Institutions",
-      description: "To establish educational institutions that nurture faith, knowledge and character in the next generation of believers.",
+      title: "Academic Sponsorship",
+      description: "To sponsor children and young people through education — from primary school to tertiary level — so poverty never robs a child of their future.",
       bgColor: "bg-primary",
       textColor: "text-primary-foreground"
     },
     {
-      icon: Sprout,
-      title: "Spiritual Growth",
-      description: "Raising a people of prayer, wisdom and power of God with purity and holiness in readiness for the second coming of our Lord Jesus Christ.",
+      icon: Globe,
+      title: "Mission & Missionary Outreach",
+      description: "To reach remote and underserved communities across Nigeria and abroad through organised care missions, relief programs, and humanitarian support.",
       bgColor: "bg-secondary",
       textColor: "text-secondary-foreground"
     }
   ];
 
   return (
-    <section className="bg-muted py-20">
+    <section className="bg-muted py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-12"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Aims & Objectives</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">Our Aims & Objectives</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Guided by the Holy Spirit, we strive to fulfil the Great Commission through prayer, service, and compassionate outreach to all humanity.
+            Every program we run is focused on one goal — bringing genuine, practical care to those who need it most.
           </p>
         </motion.div>
         
         <motion.div
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-7"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -89,13 +89,13 @@ export default function MissionSection() {
             return (
               <motion.div
                 key={objective.title}
-                className="card-hover bg-card p-8 rounded-2xl text-center shadow-lg"
+                className="card-hover bg-card p-7 rounded-2xl text-center shadow-lg"
                 variants={cardVariants}
               >
-                <div className={`w-16 h-16 ${objective.bgColor} rounded-full flex items-center justify-center mx-auto mb-6`}>
+                <div className={`w-16 h-16 ${objective.bgColor} rounded-full flex items-center justify-center mx-auto mb-4`}>
                   <IconComponent className={`${objective.textColor} h-8 w-8`} />
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-4">{objective.title}</h3>
+                <h3 className="text-xl font-bold text-foreground mb-3">{objective.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   {objective.description}
                 </p>

@@ -5,7 +5,7 @@ import { getWhatsAppLink } from "@/lib/whatsapp";
 
 export default function SupportMissionSection() {
   return (
-    <section className="bg-card py-16">
+    <section id="support-our-mission" className="bg-card py-16">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-10"
@@ -35,7 +35,7 @@ export default function SupportMissionSection() {
               </div>
               <div>
                 <p className="text-sm text-muted-foreground font-medium uppercase tracking-wide">Bank Name</p>
-                <p className="text-lg font-bold text-foreground mt-1">[Bank Name]</p>
+                <p className="text-lg font-bold text-foreground mt-1">Zenith Bank</p>
               </div>
             </div>
 
@@ -45,7 +45,7 @@ export default function SupportMissionSection() {
               </div>
               <div>
                 <p className="text-sm text-muted-foreground font-medium uppercase tracking-wide">Account Number</p>
-                <p className="text-lg font-bold text-foreground mt-1">[Account Number]</p>
+                <p className="text-lg font-bold text-foreground mt-1">1229003294</p>
               </div>
             </div>
 
@@ -55,14 +55,14 @@ export default function SupportMissionSection() {
               </div>
               <div>
                 <p className="text-sm text-muted-foreground font-medium uppercase tracking-wide">Account Name</p>
-                <p className="text-lg font-bold text-foreground mt-1">[Account Name]</p>
+                <p className="text-lg font-bold text-foreground mt-1">Covenant Care Christian Prayer Foundation</p>
               </div>
             </div>
           </div>
 
           <div className="text-center mt-8">
             <a
-              href={getWhatsAppLink("Hello Covenant Care Foundation! I've just made a donation and would like to confirm my transfer. Please advise on next steps.")}
+              href={getWhatsAppLink("Hello Covenant Care Foundation! I've just made a donation to your Zenith Bank account (1229003294) and would like to confirm my transfer. Please advise on next steps.")}
               target="_blank"
               rel="noopener noreferrer"
             >

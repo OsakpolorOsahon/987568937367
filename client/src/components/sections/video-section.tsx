@@ -5,15 +5,15 @@ export default function VideoSection() {
     <section className="bg-card py-16">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
-          className="text-center mb-12"
+          className="text-center mb-10"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Story of Faith</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">Care in Action</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Discover how prayer and community service come together to create lasting change in our world.
+            Watch us on the ground — visiting orphanages, running medical outreaches, feeding families, and supporting widows across communities in Nigeria.
           </p>
         </motion.div>
         
@@ -26,7 +26,7 @@ export default function VideoSection() {
         >
           <iframe
             src="https://www.youtube.com/embed/XqZsoesa55w"
-            title="Covenant Care Christian Prayer Partner Foundation Story"
+            title="Covenant Care Foundation — Care Outreach in Action"
             className="w-full h-full"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
