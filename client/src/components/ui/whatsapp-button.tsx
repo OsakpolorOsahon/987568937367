@@ -1,9 +1,8 @@
 import { MessageCircle } from "lucide-react";
+import { getWhatsAppLink } from "@/lib/whatsapp";
 
 export default function WhatsAppButton() {
-  const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER || "1234567890";
-  const message = "Hello! I'd like to know more about Covenant Care Christian Prayer Partner Foundation.";
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+  const whatsappUrl = getWhatsAppLink("Hello Covenant Care Foundation! I'd like to know more about your care programs and how you can help.");
 
   return (
     <a
