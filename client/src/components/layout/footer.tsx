@@ -47,7 +47,7 @@ export default function Footer() {
               />
             </div>
             <p className="text-background/80 mb-5 leading-relaxed">
-              Covenant Care Christian Prayer Partner Foundation — headquartered in Lagos State, Nigeria, reaching the vulnerable with healthcare, feeding, education, and compassionate care.
+              Covenant Care Christian Prayer Partner Foundation, headquartered in Lagos State, Nigeria, reaching the vulnerable with healthcare, feeding, education, and compassionate care.
             </p>
             <div className="flex gap-3 flex-wrap">
               {socialLinks.map((social) => {

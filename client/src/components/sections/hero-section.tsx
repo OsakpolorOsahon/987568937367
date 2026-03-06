@@ -269,7 +269,7 @@ export default function HeroSection() {
             Changing <span className="text-orange-400">Lives</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed text-white/95 drop-shadow-lg">
-            Covenant Care Christian Prayer Partner Foundation — reaching the vulnerable through medical outreaches, feeding programs, orphan care, widow support, and educational sponsorship across Nigeria and beyond.
+            Covenant Care Christian Prayer Partner Foundation, reaching the vulnerable through medical outreaches, feeding programs, orphan care, widow support, and educational sponsorship across Nigeria and beyond.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center flex-wrap">
             <a href={getWhatsAppLink("Hello Covenant Care Foundation! I'd like to join your mission and be part of your community. Please tell me how I can get involved.")} target="_blank" rel="noopener noreferrer" data-testid="link-join-mission">

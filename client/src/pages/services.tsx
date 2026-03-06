@@ -8,7 +8,7 @@ export default function Services() {
     {
       icon: Stethoscope,
       title: "Healthcare Outreach",
-      description: "Bringing free medical care directly to underserved communities through mobile clinics, health screenings, and essential medication — ensuring no one is left behind due to lack of access.",
+      description: "Bringing free medical care directly to underserved communities through mobile clinics, health screenings, and essential medication, ensuring no one is left behind due to lack of access.",
       features: [
         "Free medical consultations & screenings",
         "Essential medication distribution",
@@ -22,7 +22,7 @@ export default function Services() {
     {
       icon: HandHeart,
       title: "Care Outreach & Missions",
-      description: "Reaching communities across Nigeria and beyond with practical care — food, essentials, and relief — through organised outreach missions and partnerships with charitable organisations.",
+      description: "Reaching communities across Nigeria and beyond with practical care: food, essentials, and relief through organised outreach missions and partnerships with charitable organisations.",
       features: [
         "Community food and essentials distribution",
         "Donation drives and relief missions",
@@ -36,7 +36,7 @@ export default function Services() {
     {
       icon: Users,
       title: "Orphanage & Widow Care",
-      description: "Establishing motherless babies homes, orphanages, and providing for the needs of widows — giving them shelter, dignity, and the practical support they need to thrive.",
+      description: "Establishing motherless babies homes, orphanages, and providing for the needs of widows, giving them shelter, dignity, and the practical support they need to thrive.",
       features: [
         "Motherless babies homes",
         "Orphanage establishment and support",
@@ -50,7 +50,7 @@ export default function Services() {
     {
       icon: Sprout,
       title: "Academic Sponsorship & Education",
-      description: "Sponsoring children and young people through education — from primary school to tertiary level — so that poverty never robs a child of their future.",
+      description: "Sponsoring children and young people through education, from primary school to tertiary level, so that poverty never robs a child of their future.",
       features: [
         "School fees and tuition sponsorship",
         "Learning materials and uniforms",
@@ -78,7 +78,7 @@ export default function Services() {
     {
       icon: Phone,
       title: "Emergency Support",
-      description: "Immediate practical assistance during times of crisis — whether financial need, displacement, bereavement, or disaster — we show up with care and resources.",
+      description: "Immediate practical assistance during times of crisis, whether financial need, displacement, bereavement, or disaster. We show up with care and resources.",
       features: [
         "Emergency financial aid",
         "Disaster relief coordination",

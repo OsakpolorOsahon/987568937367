@@ -13,12 +13,12 @@ export default function About() {
   const values = [
     {
       title: "Compassionate Care",
-      description: "We believe every person — orphan, widow, the sick, or the vulnerable — deserves dignity and genuine care. Compassion drives every outreach we do.",
+      description: "We believe every person, orphan, widow, the sick, or the vulnerable, deserves dignity and genuine care. Compassion drives every outreach we do.",
       icon: Heart,
     },
     {
       title: "Community Transformation",
-      description: "We partner with communities to address real needs: healthcare, food, education, and shelter — creating lasting change from the ground up.",
+      description: "We partner with communities to address real needs: healthcare, food, education, and shelter, creating lasting change from the ground up.",
       icon: Globe,
     },
     {
@@ -52,7 +52,7 @@ export default function About() {
     {
       icon: BookOpen,
       title: "Academic Sponsorship",
-      description: "Sponsoring children and young people through school — because every child deserves the chance to learn."
+      description: "Sponsoring children and young people through school, because every child deserves the chance to learn."
     },
     {
       icon: Globe,
@@ -73,7 +73,7 @@ export default function About() {
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-4">About Covenant Care</h1>
             <p className="text-xl md:text-2xl max-w-3xl mx-auto opacity-90">
-              A foundation built on compassion — serving orphans, widows, the sick, and the vulnerable across Nigeria and beyond
+              A foundation built on compassion, serving orphans, widows, the sick, and the vulnerable across Nigeria and beyond
             </p>
           </motion.div>
         </div>
@@ -93,10 +93,10 @@ export default function About() {
                 Covenant Care Christian Prayer Partner Foundation, headquartered in Lagos State, Nigeria, was established with a clear calling: to reach out to the most vulnerable members of society with genuine, practical care.
               </p>
               <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
-                From feeding the hungry and sponsoring children's education, to establishing orphanages and caring for widows — our work is rooted in the belief that every person deserves dignity, compassion, and opportunity.
+                From feeding the hungry and sponsoring children's education to establishing orphanages and caring for widows, our work is rooted in the belief that every person deserves dignity, compassion, and opportunity.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Over the years, we have grown our outreach to include medical missions, donation drives, missionary care programs, and partnerships with like-minded organisations — all in service of the communities that need it most.
+                Over the years, we have grown our outreach to include medical missions, donation drives, missionary care programs, and partnerships with like-minded organisations, all in service of the communities that need it most.
               </p>
             </motion.div>
             

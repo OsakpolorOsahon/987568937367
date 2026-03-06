@@ -18,7 +18,7 @@ export default function TestimonialsSection() {
   const testimonials = [
     {
       name: "Adaeze Okonkwo",
-      role: "Beneficiary — Medical Outreach",
+      role: "Beneficiary, Medical Outreach",
       content: "The free medical outreach came to our community when we had no means to afford a hospital. The team was caring, professional, and genuinely concerned about our wellbeing. God bless Covenant Care.",
       initials: "AO",
       bgColor: "bg-primary"
@@ -26,13 +26,13 @@ export default function TestimonialsSection() {
     {
       name: "Emmanuel Dike",
       role: "Volunteer",
-      content: "Volunteering with Covenant Care has opened my eyes to what real service looks like. Seeing children at the orphanage receive supplies, and widows getting support — it changes you.",
+      content: "Volunteering with Covenant Care has opened my eyes to what real service looks like. Seeing children at the orphanage receive supplies and widows getting support truly changes you.",
       initials: "ED",
       bgColor: "bg-secondary"
     },
     {
       name: "Blessing Okoro",
-      role: "Beneficiary — Widow Care Program",
+      role: "Beneficiary, Widow Care Program",
       content: "After losing my husband, I didn't know how we would survive. Covenant Care provided food, school fees for my children, and people who genuinely cared. I am forever grateful.",
       initials: "BO",
       bgColor: "bg-primary"

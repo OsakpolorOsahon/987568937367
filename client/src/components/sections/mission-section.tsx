@@ -20,7 +20,7 @@ export default function MissionSection() {
     {
       icon: Stethoscope,
       title: "Medical Outreach",
-      description: "To bring free healthcare — consultations, screenings, and medication — directly to underserved communities where access to medical care is limited.",
+      description: "To bring free healthcare, consultations, screenings, and medication directly to underserved communities where access to medical care is limited.",
       bgColor: "bg-primary",
       textColor: "text-primary-foreground"
     },
@@ -48,7 +48,7 @@ export default function MissionSection() {
     {
       icon: BookOpen,
       title: "Academic Sponsorship",
-      description: "To sponsor children and young people through education — from primary school to tertiary level — so poverty never robs a child of their future.",
+      description: "To sponsor children and young people through education, from primary school to tertiary level, so poverty never robs a child of their future.",
       bgColor: "bg-primary",
       textColor: "text-primary-foreground"
     },
@@ -73,7 +73,7 @@ export default function MissionSection() {
         >
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">Our Aims & Objectives</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Every program we run is focused on one goal — bringing genuine, practical care to those who need it most.
+            Every program we run is focused on one goal: bringing genuine, practical care to those who need it most.
           </p>
         </motion.div>
         

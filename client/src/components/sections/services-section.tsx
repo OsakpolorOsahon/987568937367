@@ -33,7 +33,7 @@ export default function ServicesSection() {
     {
       title: "Orphanage & Child Care",
       description: "Establishing and supporting motherless babies homes and orphanages, giving children shelter, nutrition, education, and a loving environment to thrive.",
-      image: orphanageImg,
+      image: childrenImg,
       features: [
         "Motherless babies homes",
         "Orphanage establishment & support",
@@ -53,7 +53,7 @@ export default function ServicesSection() {
     {
       title: "Feeding & Donation Outreach",
       description: "Running feeding programs and donation drives that ensure no family in our communities goes to bed hungry or lacking basic necessities.",
-      image: childrenImg,
+      image: orphanageImg,
       features: [
         "Community feeding programs",
         "Food & essentials distribution",

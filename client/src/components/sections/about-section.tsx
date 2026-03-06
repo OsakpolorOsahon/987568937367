@@ -28,7 +28,7 @@ export default function AboutSection() {
           >
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">About Covenant Care</h2>
             <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
-              Covenant Care Christian Prayer Partner Foundation, headquartered in Lagos State, Nigeria, is dedicated to transforming lives through practical care and compassion. We reach the vulnerable — orphans, widows, the sick, and the underprivileged — with tangible support and dignity.
+              Covenant Care Christian Prayer Partner Foundation, headquartered in Lagos State, Nigeria, is dedicated to transforming lives through practical care and compassion. We reach the vulnerable: orphans, widows, the sick, and the underprivileged, with tangible support and dignity.
             </p>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
               Our work spans medical outreaches, feeding programs, academic sponsorship, orphanage support, widow care, and missionary outreach across Nigeria and beyond.

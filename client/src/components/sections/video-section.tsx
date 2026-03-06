@@ -13,7 +13,7 @@ export default function VideoSection() {
         >
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">Care in Action</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Watch us on the ground — visiting orphanages, running medical outreaches, feeding families, and supporting widows across communities in Nigeria.
+            Watch us on the ground: visiting orphanages, running medical outreaches, feeding families, and supporting widows across communities in Nigeria.
           </p>
         </motion.div>
         
@@ -26,7 +26,7 @@ export default function VideoSection() {
         >
           <iframe
             src="https://www.youtube.com/embed/XqZsoesa55w"
-            title="Covenant Care Foundation — Care Outreach in Action"
+            title="Covenant Care Foundation: Care Outreach in Action"
             className="w-full h-full"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
