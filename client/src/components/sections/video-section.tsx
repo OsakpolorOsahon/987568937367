@@ -25,7 +25,7 @@ export default function VideoSection() {
           transition={{ duration: 0.6, delay: 0.15 }}
         >
           <iframe
-            src="https://www.youtube.com/embed/XqZsoesa55w"
+            src="https://www.youtube.com/embed/NpGZvVj2GiM"
             title="Covenant Care Foundation: Care Outreach in Action"
             className="w-full h-full"
             frameBorder="0"

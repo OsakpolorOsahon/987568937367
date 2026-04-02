@@ -3,6 +3,7 @@ import { Check } from "lucide-react";
 import medicalImg from "@assets/IMG-20260301-WA0085_1772706223404.jpg";
 import orphanageImg from "@assets/IMG-20260301-WA0087_1772706223343.jpg";
 import childrenImg from "@assets/IMG-20260301-WA0083_1772706223455.jpg";
+import widowCareImg from "@assets/IMG-20260306-WA0058_1775088163865.jpg";
 
 const containerVariants = {
   hidden: {},
@@ -43,7 +44,7 @@ export default function ServicesSection() {
     {
       title: "Widow Care & Support",
       description: "Providing widows with practical assistance, emotional support, and resources that restore dignity and empower them to rebuild their lives.",
-      image: "https://images.unsplash.com/photo-1593113598332-cd288d649433?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
+      image: widowCareImg,
       features: [
         "Widow welfare & provisions",
         "Skills empowerment programs",

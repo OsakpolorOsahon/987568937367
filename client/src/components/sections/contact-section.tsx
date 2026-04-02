@@ -178,7 +178,7 @@ export default function ContactSection() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground">Headquarters</h4>
-                      <p className="text-muted-foreground">Lagos State, Nigeria</p>
+                      <p className="text-muted-foreground">141 Ikotun - Idimu Rd, Egbe, Lagos, Nigeria</p>
                     </div>
                   </div>
                   
@@ -209,7 +209,7 @@ export default function ContactSection() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground">Office Hours</h4>
-                      <p className="text-muted-foreground">Monday - Friday: 9:00 AM - 6:00 PM<br />Saturday: 10:00 AM - 4:00 PM<br />Sunday: After Service - 2:00 PM</p>
+                      <p className="text-muted-foreground">Monday – Friday: 9:00 AM – 5:00 PM<br />Saturday: 10:00 AM – 2:00 PM<br />Sunday & Public Holidays: Closed</p>
                     </div>
                   </div>
                 </div>

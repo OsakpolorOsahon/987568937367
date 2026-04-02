@@ -36,6 +36,13 @@ export default function TestimonialsSection() {
       content: "After losing my husband, I didn't know how we would survive. Covenant Care provided food, school fees for my children, and people who genuinely cared. I am forever grateful.",
       initials: "BO",
       bgColor: "bg-primary"
+    },
+    {
+      name: "Rachel Owoyemi",
+      role: "Beneficiary, Education Sponsorship",
+      content: "I'm an orphan and am truly grateful for the support I received. My tuition and accommodation fees were fully covered, and I was also provided with a new phone. This education sponsorship help lifted a huge burden off me and allowed me to focus fully on my studies. I sincerely appreciate this kindness and will always remain thankful for the opportunity Covenant Care Foundation has given me.",
+      initials: "RO",
+      bgColor: "bg-secondary"
     }
   ];
 
@@ -56,7 +63,7 @@ export default function TestimonialsSection() {
         </motion.div>
         
         <motion.div
-          className="grid md:grid-cols-3 gap-7"
+          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-7"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"

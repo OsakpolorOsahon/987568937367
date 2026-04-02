@@ -97,7 +97,7 @@ export default function Footer() {
             <div className="space-y-3.5">
               <div className="flex items-start gap-3">
                 <MapPin className="text-background/80 mt-1 h-4 w-4 flex-shrink-0" />
-                <p className="text-background/80">Lagos State, Nigeria</p>
+                <p className="text-background/80">141 Ikotun - Idimu Rd, Egbe, Lagos, Nigeria</p>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="text-background/80 h-4 w-4 flex-shrink-0" />
